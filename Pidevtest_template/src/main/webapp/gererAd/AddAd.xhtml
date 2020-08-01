@@ -1,0 +1,196 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" xmlns:p1="http://primefaces.org/ui">
+
+
+
+
+	<h:head>
+		<title>AddYourHouse</title>
+
+
+
+		<!-- Google Font -->
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+			rel="stylesheet" />
+
+
+		<h:outputStylesheet library="test" name="css/bootstrap.min.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/font-awesome.min.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/nice-select.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/owl.carousel.min.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/jquery-ui.min.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/slicknav.min.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/flaticon.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/style.css"></h:outputStylesheet>
+
+
+	</h:head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+    <!-- Header Section Begin -->
+    <header class="header-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="logo">
+                      <a href="./index.html"> <p:graphicImage
+									name="test/img/logo.png" alt="" />
+                        </a>
+                    </div>
+                   <ul class="main-menu">
+							<li><a href="../gererAd/basic.jsf">Home</a></li>
+							<li><a href="../gererAd/AddAd.jsf">Post Your House</a></li>
+							<li><a href="../gererAd/search.jsf">Search Results</a></li>
+							<li><a href="./single-property.html">Single Property</a></li>
+							<li><a href="./blog.html">Blog</a></li>
+							<li><a href="./contact.html">Contact</a></li>
+
+						</ul>
+                      
+             
+                    <div id="mobile-menu-wrap"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+    <!-- Hero Section Begin -->
+    <section class="hero-section set-bg about-us"
+			data-setbg="#{resource['test:img/bg.jpg']}">
+        <div class="container hero-text text-white">
+            <h2>Post your house</h2>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+   
+    <!-- Contact Section Begin -->
+    
+    <section class="contact-section">
+     
+        <div class="container">
+            
+               
+                    <div class="contact-form" >
+                        <h4>Hey,want to post your house ?</h4>
+                        <h:form>
+                       <center>
+                            <div class="row">
+                                   <div class="col-lg-12">
+           
+                                  
+ <p:linkButton  class="site-btn c-btn" outcome="AddHouseRent" value="Post for Rent" style="margin-right:20px;" target="_blank">
+</p:linkButton>
+<p:linkButton  class="site-btn c-btn" outcome="AddHouseSell" value="Post For Sell" style="margin-right:20px;" target="_blank">
+</p:linkButton>
+                    
+    
+                                </div>
+                            </div>
+                            </center>
+                        </h:form>
+                    </div>
+                </div>
+    </section>
+    <!-- Contact Section End -->
+    <!-- Footer Section Begin -->
+    <footer class="footer-section p-40">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center sp-60">
+                <p:graphicImage name="test/img/only-logo.png" alt="" />
+                </div>
+            </div>
+            <div class="row p-37">
+                <div class="col-lg-4">
+                    <div class="about-footer">
+                        <h5>About Homes</h5>
+                        <p>Our application will allow the user to buy or sell, 
+                        rent or estimate his property and many other features around real estate.</p>
+                   
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-blog">
+                        <h5>Latest Blog Posts</h5>
+
+                        <div class="single-blog">
+                            <div class="lt-side">
+                             <p:graphicImage name="test/img/footer-blog-1.jpg" alt="" />
+                            
+                            </div>
+                            <div class="rt-side">
+                                <h6>How to find the perfect area for<br /> your next house.</h6>
+                                <div class="blog-time">
+                                    <i class="flaticon-clock"></i>
+                                    <span>5 min</span>
+                                </div>
+                                <a href="#" class="read-more">
+                                    <i class="flaticon-right-arrow-1"></i>
+                                    <span>Read More</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="single-blog">
+                            <div class="lt-side">
+                             <p:graphicImage name="test/img/footer-blog-2.jpg" alt="" />
+                            </div>
+                            <div class="rt-side">
+                                <h6>How to find the perfect area for<br /> your next house.</h6>
+                                <div class="blog-time">
+                                    <i class="flaticon-clock"></i>
+                                    <span>5 min</span>
+                                </div>
+                                <a href="#" class="read-more">
+                                    <i class="flaticon-right-arrow-1"></i>
+                                    <span>Read More</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-address">
+                        <h5>Get In Touch</h5>
+                        <ul>
+                            <li><span>132 Liberty Streetelit, Plano, Tunisia</span>
+                            </li>
+                            <li><span>Dari@home.com</span></li>
+                            <li><span>214-805-4428</span></li>
+                        </ul>
+                        <p>This application By   Raya Hadhri Loua Ben khaddouma Majdi Chaouat Oumayma Homrani Oussama Boubaker Youssef Gharsallah
+                        </p>
+                        <p>4 InfoB 2</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row p-20">
+                <div class="col-lg-12 text-center">
+                  
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+	<!-- Js Plugins -->
+		<script src="/test/js/jquery-3.3.1.min.js"></script>
+		<script src="/test/js/bootstrap.min.js"></script>
+		<script src="/test/js/jquery.nice-select.min.js"></script>
+		<script src="/test/js/owl.carousel.min.js"></script>
+		<script src="/test/js/jquery-ui.min.js"></script>
+		<script src="/test/js/jquery.slicknav.js"></script>
+		<script src="/test/js/main.js"></script>
+
+
+</body>
+
+</ui:composition>

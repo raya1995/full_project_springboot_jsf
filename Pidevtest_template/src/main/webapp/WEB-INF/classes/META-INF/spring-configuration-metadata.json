@@ -1,0 +1,27 @@
+{
+  "groups": [
+    {
+      "name": "twilio",
+      "type": "tn.esprit.spring.sms.TwilioConfiguration",
+      "sourceType": "tn.esprit.spring.sms.TwilioConfiguration"
+    }
+  ],
+  "properties": [
+    {
+      "name": "twilio.account-sid",
+      "type": "java.lang.String",
+      "sourceType": "tn.esprit.spring.sms.TwilioConfiguration"
+    },
+    {
+      "name": "twilio.auth-token",
+      "type": "java.lang.String",
+      "sourceType": "tn.esprit.spring.sms.TwilioConfiguration"
+    },
+    {
+      "name": "twilio.trial-number",
+      "type": "java.lang.String",
+      "sourceType": "tn.esprit.spring.sms.TwilioConfiguration"
+    }
+  ],
+  "hints": []
+}

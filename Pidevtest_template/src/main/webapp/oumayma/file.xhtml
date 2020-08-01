@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+xmlns:ui="http://java.sun.com/jsf/facelets" template="/template/templateSansTemp.xhtml"
+ xmlns:th="http://www.thymeleaf.org"
+ xmlns:p="http://primefaces.org/ui">
+<ui:param name="page_name" value="Connexion" />
+<ui:define name="menu">
+<h:panelGrid columns="2" styleClass="ligne">
+
+
+ <h:form>
+ 
+
+ <p:column styleClass="centered">
+   
+ <h:graphicImage value="/uploads/#{appointmentController.files}" width="500" height="500" text-align="center"/>
+   </p:column> 
+ <h:commandButton class="site-btn c-btn"  id="button" value="Please attach a Document" action="#{appointmentController.addDocument}" />
+ 
+ 
+</h:form>
+      
+     
+     
+    </h:panelGrid></ui:define></ui:composition>

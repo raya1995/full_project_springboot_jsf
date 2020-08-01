@@ -1,0 +1,15 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"></meta>
+<title>Upload photo</title>
+</head>
+<body background="file.jpg"
+	style=" background-repeat: no-repeat;">   <form action="/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="files" multiple="multiple"></input>
+      <input type="submit" value="Upload panorama photo"></input>
+
+   </form>
+</body>
+</html>

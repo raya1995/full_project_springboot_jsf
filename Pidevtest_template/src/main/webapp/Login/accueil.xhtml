@@ -1,0 +1,477 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" xmlns:p1="http://primefaces.org/ui">
+
+
+
+
+	<h:head>
+		<title>test</title>
+
+
+
+		<!-- Google Font -->
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+			rel="stylesheet" />
+
+
+		<h:outputStylesheet library="test" name="css/bootstrap.min.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/font-awesome.min.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/nice-select.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/owl.carousel.min.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/jquery-ui.min.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/slicknav.min.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/flaticon.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/style.css"></h:outputStylesheet>
+
+	</h:head>
+
+
+	<h:body>
+
+		<!-- Page Preloder -->
+		<div id="preloder">
+			<div class="loader"></div>
+		</div>
+		<!-- Header Section Begin -->
+		<header class="header-section">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="logo">
+							<a href="../index.html"><p:graphicImage
+									name="test/img/logo.png" alt="" /> </a>
+						</div>
+						<ul class="main-menu">
+							<li><a href="../Login/signup.jsf">Sign-Up</a></li>
+						</ul>
+						<div id="mobile-menu-wrap"></div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- Header Section End -->
+		<!-- Hero Section Begin -->
+		<section class="hero-section home-page set-bg"
+			data-setbg="#{resource['test:img/bg.jpg']}">
+			<div class="container hero-text text-white">
+				<h2>Find your next</h2>
+				<h1>dream home.</h1>
+			</div>
+		</section>
+		<!-- Hero Section End -->
+		<!-- Filter Search Section Begin -->
+		<div class="filter-search">
+			<div class="container ">
+				<div class="row">
+					<div class="col-lg-12">
+						<form class="filter-form">
+							<div class="location">
+								<p>Location</p>
+								<select class="filter-location">
+									<option value="">London</option>
+									<option value="">US</option>
+									<option value="">UAE</option>
+								</select>
+							</div>
+							<div class="search-type">
+								<p>Property Type</p>
+								<select class="filter-property">
+									<option value="">House</option>
+									<option value="">Resort</option>
+									<option value="">Hotel</option>
+								</select>
+							</div>
+							<div class="price-range">
+								<p>Price</p>
+								<div class="range-slider">
+									<div id="slider-range">
+										<div tabindex="0"
+											class="ui-slider-handle ui-corner-all ui-state-default slider-left">50k</div>
+										<div tabindex="0"
+											class="ui-slider-handle ui-corner-all ui-state-default slider-right">300k</div>
+									</div>
+								</div>
+							</div>
+							<div class="bedrooms">
+								<p>Bedrooms</p>
+								<div class="room-filter-pagi">
+									<div class="bf-item">
+										<input type="radio" name="room" id="room-1" /> <label
+											for="room-1">1</label>
+									</div>
+									<div class="bf-item">
+										<input type="radio" name="room" id="room-2" /> <label
+											for="room-2">2</label>
+									</div>
+									<div class="bf-item">
+										<input type="radio" name="room" id="room-3" /> <label
+											for="room-3">3</label>
+									</div>
+									<div class="bf-item">
+										<input type="radio" name="room" id="room-4" /> <label
+											for="room-4">4+</label>
+									</div>
+								</div>
+							</div>
+							<div class="bathrooms">
+								<p>Bathrooms</p>
+								<div class="room-filter-pagi">
+									<div class="bf-item">
+										<input type="radio" name="bathroom" id="bathroom-1" /> <label
+											for="bathroom-1">1</label>
+									</div>
+									<div class="bf-item">
+										<input type="radio" name="bathroom" id="bathroom-2" /> <label
+											for="bathroom-2">2</label>
+									</div>
+									<div class="bf-item">
+										<input type="radio" name="bathroom" id="bathroom-3" /> <label
+											for="bathroom-3">3</label>
+									</div>
+									<div class="bf-item">
+										<input type="radio" name="bathroom" id="bathroom-4" /> <label
+											for="bathroom-4">4+</label>
+									</div>
+								</div>
+							</div>
+							<div class="search-btn">
+								<button type="submit">
+									<i class="flaticon-search"></i>Search
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Filter Search Section End -->
+		<!-- Hotel Room Section Begin -->
+
+		<section class="hotel-rooms spad">
+
+			<div class="container">
+
+				<div class="row">
+					<ui:repeat var="ad" value="#{adController.ads}">
+						<div class="col-lg-4 col-md-6">
+							<div class="room-items">
+								<h:graphicImage value="/upload/#{ad.image}" />
+
+								<div class="room-text">
+									<div class="room-details">
+										<div class="room-title">
+											<h5>#{ad.kindofgood}</h5>
+											<h:outputText value="#{ad.region}"></h:outputText>
+										</div>
+									</div>
+									<div class="room-features">
+										<div class="room-info">
+											<div class="beds">
+												<p>Area</p>
+												<p:graphicImage name="test/img/rooms/size.png" alt="" />
+												<i class="flaticon-bath"></i> <span>#{ad.area}</span>
+											</div>
+											<div class="beds">
+												<p>Rooms</p>
+												<p:graphicImage name="test/img/rooms/bed.png" alt="" />
+												<span>#{ad.nbRooms}</span>
+											</div>
+											<div class="beds">
+												<p>Baths</p>
+												<p:graphicImage name="test/img/rooms/bath.png" alt="" />
+												<span>#{ad.nbBaths}</span>
+											</div>
+											<div class="beds">
+												<p>Garage</p>
+												<p:graphicImage name="test/img/rooms/garage.png" alt="" />
+												<span>#{ad.nbGarage}</span>
+											</div>
+											<div class="beds">
+												<p>Like</p>
+												<p:graphicImage name="test/img/rooms/like.png" alt=""
+													width="30" height="30" />
+												<span>#{ad.nbLikes}</span>
+											</div>
+											<div class="beds">
+												<p>Dislike</p>
+												<p:graphicImage name="test/img/rooms/dislike.png" alt=""
+													width="30" height="30" />
+												<span>#{ad.nbDisLikes}</span>
+											</div>
+										</div>
+									</div>
+									<div class="room-price">
+										<p>Price</p>
+										<span>#{ad.price} Dt</span>
+										
+									</div>
+									<br></br>
+									<div class="room-price">
+										<p>Date</p>
+										<span>#{ad.adDate}</span>
+									</div>
+
+									<h:form>
+										<div align="center">
+
+
+											
+											<p:growl id="messages" showDetail="true" />
+											<p:commandButton class="site-btn c-btn" value="Details"
+												oncomplete="PF('dlg').show()"
+												action="#{adController.incrementad(ad.idAd)}"
+												update="display" />
+
+
+											<p:dialog header="Details Of The House" widgetVar="dlg"
+												update="display" showEffect="fade" hideEffect="fade" id="display">
+
+												<h:panelGrid columns="2" cellpadding="5">
+
+													<f:facet name="header">
+														<h:graphicImage value="/upload/#{ad.image}" />
+													</f:facet>
+													<h:outputText  rendered="#{not empty ad.rentperiod}" value="This House is for Rent" style="font-weight: bold"/>
+													<h:outputText  rendered="#{empty ad.rentperiod}" value="This House is for Sell" style="font-weight: bold"/>
+												
+													<br />
+													<h:outputText value="Description:" />
+													<h:outputText value="#{ad.description}"
+														style="font-weight: bold" />
+													<h:outputText value="Price:" />
+													<h:outputText value="#{ad.price} DT"
+														style="font-weight: bold" />
+														<h:outputText value="Date:" />
+													<h:outputText value="#{ad.adDate}"
+														style="font-weight: bold" />
+													<h:outputText  rendered="#{not empty ad.rentperiod}" value="Rent Period:" />
+													<h:outputText  rendered="#{not empty ad.rentperiod}" value="#{ad.rentperiod}" style="font-weight: bold" ></h:outputText>
+													
+											<h:outputText  rendered="#{not empty ad.startDate}" value="startDate of Renting:" />
+													<h:outputText  rendered="#{not empty ad.startDate}" value="#{ad.startDate}" style="font-weight: bold" ></h:outputText>
+												<h:outputText  rendered="#{not empty ad.endDate}" value="endDate of Renting:" />
+													<h:outputText  rendered="#{not empty ad.endDate}" value="#{ad.endDate}" style="font-weight: bold" ></h:outputText>
+														<h:outputText  rendered="#{not empty ad.rentingtype}" value="renting type:" />
+													<h:outputText  rendered="#{not empty ad.rentingtype}" value="#{ad.rentingtype}" style="font-weight: bold" ></h:outputText>
+															
+																
+
+													<h:outputText value="location:" />
+													<h:outputText value="#{ad.location}"
+														style="font-weight: bold" />
+													<h:outputText value="Area:" />
+													<h:outputText value="#{ad.area}" style="font-weight: bold" />
+													<h:outputText value="Views Number:" />
+													<h:outputText value="#{ad.viewsNumber}" style="font-weight: bold" />
+														
+							<h:outputText value="Best Views On Ads:"
+								style="font-weight: bold" />
+							<p:rating value="#{adController.a}" stars="3" cancel="false" />
+											
+												</h:panelGrid>
+											</p:dialog>
+				
+					
+											
+										</div>
+
+									</h:form>
+								</div>
+							</div>
+						</div>
+
+
+					</ui:repeat>
+
+				</div>
+
+			</div>
+
+		</section>
+
+		<!-- Popular Room Section End -->
+		<!-- Newslatter Section Begin -->
+		
+		<section class="services-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="left-side">
+							<h2>
+								<span>Why choose homes?</span><br />Because we we are the best
+								in <br />the business.
+							</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+								Duis id est nec nisl tristique dignissim semper sed diam. Donec
+								vulputate neque in massa hendrerit, non dignissim ipsum varius.
+								Mauris dignissim libero ipsum, nec molestie nulla molestie at.
+								Nam imperdiet hendrerit finibus. Sed porttitor ultricies
+								sagittis. Nullam lobortis nec quam vitae venenatis.</p>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="right-side">
+							<ul>
+								<li><p:graphicImage name="test/img/check.png" alt="" />Lorem
+									ipsum dolor sit amet, consectetur adipiscing elit.</li>
+								<li><p:graphicImage name="test/img/check.png" alt="" />raesent
+									tincidunt diam in ante faucibus tristique.</li>
+								<li><p:graphicImage src="test/img/check.png" alt="" />Vivamus
+									id nisl sed mi varius lobortis.</li>
+								<li><p:graphicImage name="img/check.png" alt="" />Suspendisse
+									sit amet erat placerat, molestie neque id</li>
+								<li><p:graphicImage name="test/img/check.png" alt="" />Fusce
+									pretium libero sit amet ipsum posuere pretium.</li>
+								<li><p:graphicImage name="test/img/check.png" alt="" />Praesent
+									tincidunt diam in ante faucibus tristique.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Servies Section End -->
+		<section class="instagram">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<h2>Don’t forget to follow us on Instagram @homes</h2>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+		<!-- Footer Section Begin -->
+		<footer class="footer-section">
+			<!-- Rooms Pic Section Begin-->
+			<div class="room-pic">
+				<div class="container-fluid">
+					<div class="row sp-40">
+						<p:graphicImage name="/test/img/room-pic/1.jpg" alt="" />
+						<p:graphicImage name="test/img/room-pic/2.jpg" alt="" />
+						<p:graphicImage name="test/img/room-pic/3.jpg" alt="" />
+						<p:graphicImage name="test/img/room-pic/4.jpg" alt="" />
+						<p:graphicImage name="test/img/room-pic/5.jpg" alt="" />
+					</div>
+				</div>
+			</div>
+			<!-- Rooms Pic Section End -->
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center sp-60">
+						<p:graphicImage name="test/img/only-logo.png" alt="" />
+					</div>
+				</div>
+				<div class="row p-37">
+					<div class="col-lg-4">
+						<div class="about-footer">
+							<h5>About Homes</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+								Donec eleifend tristique venenatis. Maecenas a rutrum tellus nam
+								vel semper nibh.</p>
+							<div class="footer-social">
+								<a href="#"><i class="fa fa-pinterest"></i></a> <a href="#"><i
+									class="fa fa-facebook"></i></a> <a href="#"><i
+									class="fa fa-twitter"></i></a> <a href="#"><i
+									class="fa fa-dribbble"></i></a> <a href="#"><i
+									class="fa fa-behance"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<div class="footer-blog">
+							<h5>Latest Blog Posts</h5>
+
+							<div class="single-blog">
+								<div class="lt-side">
+									<p:graphicImage name="img/footer-blog-1.jpg" alt="" />
+								</div>
+								<div class="rt-side">
+									<h6>
+										How to find the perfect area for<br /> your next house.
+									</h6>
+									<div class="blog-time">
+										<i class="flaticon-clock"></i> <span>5 min</span>
+									</div>
+									<a href="#" class="read-more"> <i
+										class="flaticon-right-arrow-1"></i> <span>Read More</span>
+									</a>
+								</div>
+							</div>
+							<div class="single-blog">
+								<div class="lt-side">
+									<p:graphicImage name="img/footer-blog-2.jpg" alt="" />
+								</div>
+								<div class="rt-side">
+									<h6>
+										How to find the perfect area for<br /> your next house.
+									</h6>
+									<div class="blog-time">
+										<i class="flaticon-clock"></i> <span>5 min</span>
+									</div>
+									<a href="#" class="read-more"> <i
+										class="flaticon-right-arrow-1"></i> <span>Read More</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<div class="footer-address">
+							<h5>Get In Touch</h5>
+							<ul>
+								<li><i class="flaticon-placeholder"></i><span>132
+										Liberty Streetelit, Plano, Texas</span></li>
+								<li><i class="flaticon-envelope"></i><span>hello@home.com</span></li>
+								<li><i class="flaticon-smartphone"></i><span>214-805-4428</span></li>
+							</ul>
+							<p>Monday – Friday: 9 am – 5 pm</p>
+							<p>Saturday: 9 am – 1pm</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="row p-20">
+					<div class="col-lg-12 text-center">
+						<div class="copyright">
+							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							<script>
+								document.write(new Date().getFullYear());
+							</script>
+							All rights reserved | This template is made with <i
+								class="fa fa-heart-o" aria-hidden="true"></i> by <a
+								href="https://colorlib.com" target="_blank">Colorlib</a>
+							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- Footer Section End -->
+
+		<!-- Js Plugins -->
+		<script src="../test/js/jquery-3.3.1.min.js"></script>
+		<script src="../test/js/bootstrap.min.js"></script>
+		<script src="../test/js/jquery.nice-select.min.js"></script>
+		<script src="../test/js/owl.carousel.min.js"></script>
+		<script src="../test/js/jquery-ui.min.js"></script>
+		<script src="../test/js/jquery.slicknav.js"></script>
+		<script src="../test/js/main.js"></script>
+
+
+
+
+
+
+	</h:body>
+
+
+</ui:composition>
+

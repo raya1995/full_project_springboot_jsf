@@ -1,0 +1,144 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/template/indexAdmin.xhtml">
+	<ui:param name="page_name" value="Accueil" />
+	<ui:define name="Admin">
+		<!--BEGIN : TP1 JSF Introduction Login -->
+
+		<h:panelGroup columns="2">
+			<h:form>
+				<h:dataTable value="#{ReclamationController.reclamations}"
+					var="employe" border="1">
+
+
+					<!--  <h:column>
+						<f:facet name="header">
+							<h:outputText value="Description Reclamation" />
+						</f:facet>
+						<h:outputText value="#{employe.description}" />
+					</h:column>
+
+
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="User email" />
+						</f:facet>
+						<h:outputText value="#{employe.userId.email}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="annuler la reclamation " />
+						</f:facet>
+						<h:commandButton value="annuler"
+							action="#{ReclamationController.annulreclamation(employe.id)}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="annuler la reclamation " />
+						</f:facet>
+						<h:commandButton
+							value="#{UserRestController.checkBloked(employe.userId)}"
+							action="#{UserRestController.Blokedforce(employe.userId)}" />
+					</h:column>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				</h:dataTable>
+
+			</h:form>
+		</h:panelGroup>
+		<div class="col-lg-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">DataTables Advanced Tables</div>
+				
+
+				<div class="panel-body">
+					<div class="table-responsive">
+
+						<h:dataTable value="#{ReclamationController.reclamations}"
+							var="employe"
+							class="table table-striped table-bordered table-hover"
+							id="dataTables-example" border="1">
+
+
+							<h:column>
+								<f:facet name="header">
+									<h:outputText value="Description Reclamation" />
+								</f:facet>
+								<h:outputText value="#{employe.description}" />
+							</h:column>
+
+
+							<h:column>
+								<f:facet name="header">
+									<h:outputText value="User email" />
+								</f:facet>
+								<h:outputText value="#{employe.userId.email}" />
+							</h:column>
+							<h:column>
+								<f:facet name="header">
+									<h:outputText value="annuler la reclamation " />
+								</f:facet>
+								<h:form>
+								<h:commandButton value="annuler"
+									action="#{ReclamationController.annulreclamation(employe.id)}" />
+									</h:form>
+							</h:column>
+							<h:column>
+								<f:facet name="header">
+									<h:outputText value="annuler la reclamation " />
+								</f:facet>
+								<h:form>
+								<h:commandButton
+									value="#{UserRestController.checkBloked(employe.userId)}"
+									action="#{UserRestController.Blokedforce(employe.userId)}" />
+									</h:form>
+							</h:column>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</h:dataTable>
+
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+		<h:link outcome="/pages/admin/welcome" value="Page d'acceuil" />
+		<br />
+	</ui:define>
+</ui:composition>

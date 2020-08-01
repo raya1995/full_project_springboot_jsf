@@ -1,0 +1,368 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" 
+	xmlns:b="http://bootsfaces.net/ui">
+
+
+	<head>
+<meta charset="UTF-8" />
+<meta name="description" content="Homes Template" />
+<meta name="keywords" content="Homes, unica, creative, html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+<title>Homes Page | Template</title>
+ <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+        rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900i" rel="stylesheet"/>
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="../resources/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../resources/css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../resources/css/nice-select.css" type="text/css"/>
+    <link rel="stylesheet" href="../resources/css/owl.carousel.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../resources/css/jquery-ui.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../resources/css/slicknav.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../resources/css/flaticon.css" type="text/css"/>
+    <link rel="stylesheet" href="../resources/css/style.css" type="text/css"/>
+   
+   
+   
+   <!-- menu -->
+    <link rel="stylesheet" href="../resources/menu/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../resources/menu/vendors/linericon/style.css"/>
+    <link rel="stylesheet" href="../resources/menu/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../resources/menu/vendors/owl-carousel/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="../resources/menu/vendors/lightbox/simpleLightbox.css"/>
+    <link rel="stylesheet" href="../resources/menu/vendors/nice-select/css/nice-select.css"/>
+    <link rel="stylesheet" href="../resources/menu/vendors/animate-css/animate.css"/>
+    <link rel="stylesheet" href="../resources/menu/vendors/flaticon/flaticon.css"/>
+    <!-- main css -->
+    <link rel="stylesheet" href="../resources/menu/css/style.css"/>
+    <link rel="stylesheet" href="../resources/menu/css/responsive.css"/>
+   <!-- Menu -->
+   
+   
+
+
+<header class="header_area">
+            <div class="top_menu">
+                <div class="container">
+                    <div class="top_inner">
+                        <div class="float-left">
+                            <a href="#">Visit Us</a>
+                            <a href="#">Online Support</a>
+                        </div>
+                        <div class="float-right">
+                            <ul class="list header_socila">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main_menu" id="mainNav">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""/><img src="img/logo-2.png" alt="" /></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                            <ul class="nav navbar-nav menu_nav ml-auto">
+                                <li class="nav-item active"><a class="nav-link" href="../client/Accueil.jsf">Home</a></li>
+                                <li class="nav-item active"><a class="nav-link" href="../client/AddAd.jsf">Post your House</a></li> 
+                                <li class="nav-item"><a class="nav-link" href="../client/AdVente.jsf">Sell</a></li> 
+                                <li class="nav-item submenu dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Rent</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item"><a class="nav-link" href="../client/AdRent.jsf">Rent</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="../client/AdHRent.jsf">Holiday Renting</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="../client/AdTRent.jsf">Temporary Renting</a></li>
+                                    </ul>
+                                </li> 
+                                <li class="nav-item submenu dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Estimate</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item"><a class="nav-link" href="../client/EstimationAccueil.jsf">Property Estimate</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="../client/EstimationAccueilLoyer.jsf">Rent Estimate</a></li>
+                                    </ul>
+                                </li> 
+                                <li class="nav-item"><a class="nav-link" href="contact.html">Credit Simulation</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contact.html">Furniture</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                                <li class="nav-item submenu dropdown">
+                                    <a href="../client/Profil.jsf" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account</a>
+                                    <ul class="dropdown-menu">
+                                     	<li class="nav-item"><a class="nav-link" href="../client/Profil.jsf">Profil</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="../Login/login.jsf">LogOut</a></li>
+                                    </ul>
+                                </li> 
+                                
+                            </ul>
+                        </div> 
+                    </div>
+                </nav>
+            </div>
+        </header>
+      </head> 
+ <body>
+		<!-- Header Section End -->
+		<!-- Hero Section Begin -->
+		<section class="hero-section home-page set-bg"
+			data-setbg="../resources/img/bg.jpg">
+			<div class="container hero-text text-white">
+				<h1>Free online property valuation</h1>
+				<p:separator />
+				<h3>Get the price of your house or apartment in 2 minutes</h3>
+				<p:separator />
+			</div>
+		</section>
+
+
+		<section class="contact-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8">
+				<h3>Why estimate the value of your home?</h3>
+				<br />
+				<p>The realization of a real estate appraisal can have many
+					motivations: a sale project following a professional transfer or
+					the growing family or even the simple curiosity to know the value
+					of his property. Before even asking a real estate agent for a home
+					appraisal, it is possible and even recommended to make an appraisal
+					online. Dari.tn is free, fast and without obligation</p>
+				<br />
+				
+			
+				<div>
+				<h3>How to estimate a property for free?</h3><br/>
+				</div>
+				<p>The valuation of a property takes into account its location, its environment (shops, transport),
+				 its characteristics (condition, area, exposure ...) and demand. To refine the calculation of the sale
+				 price you can also use simulators or contact a local real estate agent.</p>
+
+
+				<h4>Select the type of property:</h4>
+				<br />
+				<table border-collapse="collapse" align="center">
+					<tr>
+						<td><p:link id="idNormandie"
+								href="#{estimationControllerJsf.redirectEstimerM()}"
+								target="_blank">
+								<p:graphicImage value="../resources/img/estimation/maison.jpg"
+									title="Normandie"/>
+							</p:link></td>
+						<td><h:outputText style="color:white"
+								value="aaaaa:"></h:outputText></td>
+						<td><p:link id="idNormandie"
+								href="#{estimationControllerJsf.redirectEstimerApp()}"
+								target="_blank">
+								<p:graphicImage value="../resources/img/estimation/appart.jpg"
+									title="Normandie" />
+							</p:link></td>
+					</tr>
+
+				</table>
+				
+				</div>
+			
+				
+				<div class="col-lg-4">
+						<div class="contact-info">
+							<h4>Contact a real estate agency for a free estimate</h4>
+							<ul class="contact-addr">
+							<p:graphicImage value="../resources/img/estimation/agence.png"
+									title="Normandie" style="width:280px; height: 200px" />
+							<p>75% of sellers contact a professional to obtain a reliable estimate and thus sell at the best price.</p>	
+							</ul>						
+						</div>
+					</div>
+				
+				</div>
+				
+				
+				<br/><br/>	<p:separator /><br/><br/><br/>
+		
+				<table border-collapse="collapse">
+				<tr>
+					<td><h4 >Compare your property with <br/> the market</h4>
+					<br/>
+					<p>Find out the selling prices in your<br/> sector thanks to Dari's tools</p>
+					</td>
+					
+					<td style="color:white">aaaaaaaaaaaa</td>
+					
+					
+					<td><p:graphicImage value="../resources/img/estimation/map.PNG"
+									title="Normandie" style="width: 250px ;height: 150px" /></td>
+	
+					
+					<td style="color:white">aaaa</td>
+	
+						
+					<td><p:graphicImage value="../resources/img/estimation/sold.jpg"
+									title="Normandie" style="width: 250px ;height: 150px" /></td>
+				</tr>
+				</table>
+		<br/>
+		
+		<div style="margin-left:335px">
+					
+				<h:form>
+					<a href="Prices.jsf" class="site-btn list-btn" style="width: 250px;background:#6F6F8A;color:white;">Prices per m²</a><p:spacer width="38" height="20" />
+					<a href="LastSold.jsf" class="site-btn list-btn" style="width: 250px;background:#6F6F8A;color:white;">LastSold</a>
+				</h:form>
+				
+				</div>
+				</div>
+
+		</section>
+
+
+
+
+		<footer class="footer-section">
+			<!-- Rooms Pic Section Begin-->
+			<div class="room-pic">
+				<div class="container-fluid">
+					<div class="row sp-40">
+						<img src="../resources/img/room-pic/1.jpg" alt="" /> <img
+							src="../resources/img/room-pic/2.jpg" alt="" /> <img
+							src="../resources/img/room-pic/3.jpg" alt="" /> <img
+							src="../resources/img/room-pic/4.jpg" alt="" /> <img
+							src="../resources/img/room-pic/5.jpg" alt="" />
+					</div>
+				</div>
+			</div>
+			<!-- Rooms Pic Section End -->
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center sp-60">
+						<img src="../resources/img/only-logo.png" alt="" />
+					</div>
+				</div>
+				<div class="row p-37">
+					<div class="col-lg-4">
+						<div class="about-footer">
+							<h5>About Homes</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+								Donec eleifend tristique venenatis. Maecenas a rutrum tellus nam
+								vel semper nibh.</p>
+							<div class="footer-social">
+								<a href="#"><i class="fa fa-pinterest"></i></a> <a href="#"><i
+									class="fa fa-facebook"></i></a> <a href="#"><i
+									class="fa fa-twitter"></i></a> <a href="#"><i
+									class="fa fa-dribbble"></i></a> <a href="#"><i
+									class="fa fa-behance"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<div class="footer-blog">
+							<h5>Latest Blog Posts</h5>
+
+							<div class="single-blog">
+								<div class="lt-side">
+									<img src="../resources/img/footer-blog-1.jpg" alt="" />
+								</div>
+								<div class="rt-side">
+									<h6>
+										How to find the perfect area for<br /> your next house.
+									</h6>
+									<div class="blog-time">
+										<i class="flaticon-clock"></i> <span>5 min</span>
+									</div>
+									<a href="#" class="read-more"> <i
+										class="flaticon-right-arrow-1"></i> <span>Read More</span>
+									</a>
+								</div>
+							</div>
+							<div class="single-blog">
+								<div class="lt-side">
+									<img src="../resources/img/footer-blog-2.jpg" alt="" />
+								</div>
+								<div class="rt-side">
+									<h6>
+										How to find the perfect area for<br /> your next house.
+									</h6>
+									<div class="blog-time">
+										<i class="flaticon-clock"></i> <span>5 min</span>
+									</div>
+									<a href="#" class="read-more"> <i
+										class="flaticon-right-arrow-1"></i> <span>Read More</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<div class="footer-address">
+							<h5>Get In Touch</h5>
+							<ul>
+								<li><i class="flaticon-placeholder"></i><span>132
+										Liberty Streetelit, Plano, Texas</span></li>
+								<li><i class="flaticon-envelope"></i><span>hello@home.com</span></li>
+								<li><i class="flaticon-smartphone"></i><span>214-805-4428</span></li>
+							</ul>
+							<p>Monday – Friday: 9 am – 5 pm</p>
+							<p>Saturday: 9 am – 1pm</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="row p-20">
+					<div class="col-lg-12 text-center">
+						<div class="copyright">
+							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							Copyright
+							<!--&copy;-->
+							<script>
+								document.write(new Date().getFullYear());
+							</script>
+							All rights reserved | This template is made with <i
+								class="fa fa-heart-o" aria-hidden="true"></i> by <a
+								href="https://colorlib.com" target="_blank">Colorlib</a>
+							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+
+		<!-- Js Plugins -->
+		<script src="../resources/js/jquery-3.3.1.min.js"></script>
+		<script src="../resources/js/bootstrap.min.js"></script>
+		<script src="../resources/js/jquery.nice-select.min.js"></script>
+		<script src="../resources/js/owl.carousel.min.js"></script>
+		<script src="../resources/js/jquery-ui.min.js"></script>
+		<script src="../resources/js/jquery.slicknav.js"></script>
+		<script src="../resources/js/main.js"></script>
+		
+		
+		<!-- Menu --> 
+	    <script src="../resources/menu/js/popper.js"></script>
+	    <script src="../resources/menu/js/bootstrap.min.js"></script>
+	    <script src="../resources/menu/js/stellar.js"></script>
+	    <script src="../resources/menu/vendors/lightbox/simpleLightbox.min.js"></script>
+	    <script src="../resources/menu/js/jquery.ajaxchimp.min.js"></script>  
+	    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+	    <script src="../resources/menu/js/gmaps.min.js"></script>
+	    <script src="../resources/menu/js/theme.js"></script>
+    
+	</body>
+
+
+</ui:composition>

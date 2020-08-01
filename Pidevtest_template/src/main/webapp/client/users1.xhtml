@@ -1,0 +1,135 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	template="/template/template.xhtml">
+	<ui:param name="page_name" value="Accueil" />
+	
+	<ui:define name="content">
+		<!--BEGIN : TP1 JSF Introduction Login -->
+
+		 <h:panelGroup columns="2">
+			<h:form>
+				 <h:dataTable value="#{UserRestController.users}" var="employe"
+					border="1">
+					<!--<h:column>
+						<f:facet name="header">
+							<h:outputText value="Picture" />
+						</f:facet>
+						<h:graphicImage value="../../resources/images/#{employe.picture}"
+							styleClass="bord" width="30px" height="30px" />
+					</h:column>
+
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Login (Email)" />
+						</f:facet>
+						<h:outputText value="#{employe.email}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="first name" />
+						</f:facet>
+						<h:outputText value="#{employe.firstName}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Last name" />
+						</f:facet>
+						<h:outputText value="#{employe.lastname}" />
+					</h:column>
+
+
+					<h:column>
+						
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="suivie " />
+						</f:facet>
+						<h:commandButton id="btn"
+							value="#{FollowRestController.value(employe.id)}"
+							action="#{FollowRestController.Follow(employe.id)}" />
+					</h:column>
+					  <h:column>
+						<f:facet name="header">
+							<h:outputText value="afficher " />
+						</f:facet>
+						<h:commandButton value="profile"
+							action="#{UserRestController.afficherProfile(employe.id)}" />
+					</h:column>
+
+
+
+-->
+
+
+
+
+				</h:dataTable>
+
+		
+		<section class="hotel-rooms spad" >
+		
+			<div class="container" >
+			
+				<div class="row">
+				<ui:repeat value="#{UserRestController.users}" var="emplo">
+					<div class="col-lg-4 col-md-6">
+					
+						<div class="room-items">
+							
+							<h:graphicImage class="room-img set-bg" value="../resources/images/#{emplo.picture}"
+							styleClass="bord" width="30px" height="30px" />
+							<div class="room-text">
+								<div class="room-details">
+									<div class="room-title">
+										<h:outputText value="#{emplo.email}" />
+										
+										
+									</div>
+								</div>
+								<div class="room-features">
+									<div class="room-info">
+										<h:outputText value="#{emplo.firstName}" />
+										
+										<h:outputText value="#{emplo.lastname}" />
+									</div>
+								</div>
+								<div class="room-features">
+									<div class="room-info">
+									
+									<p>Rate</p>
+										<p:rating
+								value="#{UserRestController.getmoyenvalue(emplo.id)}"
+								readonly="true" />
+										
+										
+									</div>
+								</div>
+								
+									
+										<h:commandButton value="profile" class="site-btn btn-line"
+											action="#{UserRestController.afficherProfile(emplo.id)}" />
+									
+								</div>
+						</div>
+						
+					</div>
+					</ui:repeat>
+					
+					
+					
+			
+				</div>
+				
+			</div>
+				
+		</section>
+		<h:link outcome="/pages/admin/welcome" value="Page d'acceuil" />
+		<br />
+			</h:form>
+		</h:panelGroup> 
+	</ui:define>
+</ui:composition>

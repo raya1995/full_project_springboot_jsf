@@ -1,0 +1,150 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+</h:head>
+
+
+
+<h:form id="form">
+	<link rel="stylesheet" type="text/css" href="resources/css/log.css"
+		media="screen" />
+
+	<div class="login-wrap">
+		<div class="login-html">
+			<input id="tab-1" type="radio" name="tab" class="sign-in"
+				checked="checked"><label for="tab-1" class="tab">Sign
+				In</label></input> <input id="tab-2" type="radio" name="tab" class="sign-up"><label
+				for="tab-2" class="tab">Sign Up</label></input>
+			<div class="login-form">
+
+				<div class="sign-in-htm">
+
+					<div class="group">
+
+
+						<h:outputText class="label" for="user" value="Login (Email)" />
+					</div>
+					<div class="group">
+
+						<h:inputText class="input" id="user"
+							value="#{UserRestController.email}" />
+					</div>
+					<div class="group">
+
+						<h:outputText class="label" for="pass" value="Password" />
+					</div>
+					<div class="group">
+
+						<h:inputSecret class="input" id="pass"
+							value="#{UserRestController.password}" />
+					</div>
+					<div class="group">
+						<input id="check" type="checkbox" class="check" checked="checked"></input>
+						<label for="check"><span class="icon"></span> Keep me
+							Signed in</label>
+					</div>
+					<div class="group">
+
+						<h:commandButton class="button" id="btn" value="Sign In"
+							action="#{UserRestController.doLogin()}" />
+					</div>
+
+					<h:message for="btn" />
+					<div class="hr"></div>
+					<div class="foot-lnk">
+						<h:link outcome="/ForgetPassword" value="Forget Password" />
+					</div>
+				</div>
+				<div class="sign-up-htm">
+					<div class="group">
+
+
+						<h:outputText class="label" value="first name" />
+					</div>
+					<div class="group">
+
+						<h:inputText class="input"
+							value="#{RegistrationController.firstName}" />
+					</div>
+					<!-- last name -->
+					<div class="group">
+
+
+						<h:outputText class="label" value="last name" />
+					</div>
+					<div class="group">
+
+						<h:inputText class="input"
+							value="#{RegistrationController.lastname}" />
+					</div>
+					<!-- email -->
+					<div class="group">
+
+
+
+						<h:outputText class="label" value="E-mail" />
+					</div>
+					<div class="group">
+
+						<h:inputText class="input" value="#{RegistrationController.email}" />
+					</div>
+					<!-- date -->
+					<div class="group">
+
+
+						<!--  <h:outputText for="button" value="Button:" />-->
+						<p:outputLabel for="date" value="Date: " />
+						
+						<!-- <h:outputText class="label" value="date de naissance" /> -->
+					</div>
+					<div class="group">
+					<p:inputMask id="date" class="input" value="#{RegistrationController.date_naissance}" mask="99/99/9999" />
+						<!-- <p:calendar id="button" class="input"
+							value="#{RegistrationController.date_naissance}" showOn="button" /> -->
+						<!-- <h:inputText class="input"
+							value="#{RegistrationController.date_naissance}" /> -->
+					</div>
+
+					<div class="group">
+
+						<h:commandButton class="button" id="btn1" value="Sign up"
+							action="#{RegistrationController.addClient()}" />
+					</div>
+
+
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+</h:form>
+
+
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

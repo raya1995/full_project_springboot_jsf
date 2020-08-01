@@ -1,0 +1,93 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	template="/template/template.xhtml">
+	<ui:param name="page_name" value="Accueil" />
+	
+	<ui:define name="content">
+		<!--BEGIN : TP1 JSF Introduction Login -->
+		  <!-- <h:panelGroup>
+			<h:graphicImage
+				value="../resources/images/#{UserRestController.inviteClient.picture}"
+				styleClass="bord" width="300px" height="300px"
+				align-content="center" />
+			<h:form id="form">
+
+				<h:outputText value="#{UserRestController.inviteClient.id}" />
+
+				<h:inputText class="input"
+					value="#{ReclamationController.description}" />
+				<h:commandButton class="button" value="Sign up"
+					action="#{ReclamationController.sendReclamation()}" />
+
+
+
+			</h:form>
+			<br />
+			<br />
+			<br />
+		</h:panelGroup>-->
+		 <section class="team-section">
+			<div class="container">
+
+				<div class="row text-center">
+
+					<div class="col-md-4"
+						style="margin: auto; width: 50%; border: 3px solid green; padding: 10px;">
+						<div class="single-team">
+							<div class="membr-pic">
+								<h:graphicImage
+									value="../resources/images/#{UserRestController.inviteClient.picture}" />
+							</div>
+							<div class="membr-info">
+								<p>
+									<h:outputText value="#{UserRestController.inviteClient.email}" />
+								</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section> 
+
+		<section class="contact-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8" style="margin: auto; width: 50%; padding: 10px;">
+						<div class="contact-form">
+							<h4>Get in Touch</h4>
+							<form>
+								<div class="row"></div>
+								<div class="row">
+									<div class="col-lg-12">
+										<h:form>
+
+										<h:inputTextarea class="input"
+											value="#{ReclamationController.description}">
+											<f:validateLength minimum="5" maximum="300" />
+										</h:inputTextarea>
+
+
+
+
+										<h:commandButton  class="button" value="send"
+											action="#{ReclamationController.sendReclamation()}" />
+									</h:form>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+
+	</ui:define>
+
+
+</ui:composition>

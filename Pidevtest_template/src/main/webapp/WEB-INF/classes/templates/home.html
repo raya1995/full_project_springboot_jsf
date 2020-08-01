@@ -1,0 +1,227 @@
+
+<!DOCTYPE html   >
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1"/></meta>
+<meta charset="UTF-8"></meta>
+
+<title>Home</title>
+
+</head>
+<body background="baobab3d.jpg"
+	style="background-position: center; background-repeat: no-repeat; background-size: cover;">
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+	<script src="/js/main.js"></script>
+	<div align="center">
+		<a th:href="@{/displayBarGraph}">Bar-Graph</a><br /> <br /> <a
+			th:href="@{/displayPieChart}">Pie-Chart</a>
+			
+	<form action="/upload" method="post" enctype="multipart/form-data"> <br />
+      <input type="file" name="files" multiple>
+      <input type="submit" value="Upload Files"></input>
+       <div th:if="${msg}"></div>
+    <span th:text="${msg}"></span>
+<br>
+    </form>
+   <form id="ipForm" action="GeoIPTest" method="POST">
+        <input type="text" name = "IpAddress" id = "ip"/>
+        <input type="submit" name="submit" value="submit" /> 
+        
+      </form>
+	</div>
+	<link rel="stylesheet" href="/css/main.css" />
+	<noscript>
+		<h2>Sorry! Your browser doesn't support Javascript</h2>
+	</noscript>
+
+	<div id="username-page">
+		<div class="username-page-container">
+			<h1 class="title">Type your username</h1>
+			<form id="usernameForm" name="usernameForm">
+				<div class="form-group">
+					<input type="text" id="name" placeholder="Username"
+						autocomplete="off" class="form-control" />
+				</div>
+				<div class="form-group">
+					<button type="submit" class="accent username-submit">Start
+						Chatting</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div id="chat-page" class="hidden">
+		<div class="chat-container">
+			<div class="chat-header">
+				<h2>Chat</h2>
+			</div>
+			<div class="connecting">Connecting...</div>
+			<ul id="messageArea">
+
+			</ul>
+			<form id="messageForm" name="messageForm" nameForm="messageForm">
+				<div class="form-group">
+					<div class="input-group clearfix">
+						<input type="text" id="message" placeholder="Type a message..."
+							autocomplete="off" class="form-control" />
+						<button type="submit" class="primary">Send</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+	<script src="/js/main.js"></script> </br>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	
+	<script src="https://maps.googleapis.com/maps/api/js?key=YOUR-API-KEY" async defer></script>
+	
+
+<!--  <html>
+  <head>
+    <title>Geolocation</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+// Note: This example requires that you consent to location sharing when
+// prompted by your browser. If you see the error "The Geolocation service
+// failed.", it means you probably did not give permission for the browser to
+// locate you.
+
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: -34.397, lng: 150.644},
+    zoom: 6
+  });
+  var infoWindow = new google.maps.InfoWindow({map: map});
+
+  // Try HTML5 geolocation.
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
+
+      infoWindow.setPosition(pos);
+      infoWindow.setContent('Location found.');
+      map.setCenter(pos);
+    }, function() {
+      handleLocationError(true, infoWindow, map.getCenter());
+    });
+  } else {
+    // Browser doesn't support Geolocation
+    handleLocationError(false, infoWindow, map.getCenter());
+  }
+}
+
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+  infoWindow.setPosition(pos);
+  infoWindow.setContent(browserHasGeolocation ?
+                        'Error: The Geolocation service failed.' :
+                        'Error: Your browser doesn\'t support geolocation.');
+}
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap"
+        async defer>
+    </script>
+  </body>
+</html>-->
+
+  <!--  <title>Geolocation</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      // Note: This example requires that you consent to location sharing when
+      // prompted by your browser. If you see the error "The Geolocation service
+      // failed.", it means you probably did not give permission for the browser to
+      // locate you.
+      var map, infoWindow;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 6
+        });
+        infoWindow = new google.maps.InfoWindow;
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            infoWindow.open(map);
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+        infoWindow.open(map);
+      } -->
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCEmoKTU0Ec0XPSNp8l20z_YGaWlumCKm8&callback=initMap">
+    </script>
+  </body>
+</html>
+     
+      
+      <script type="text/javascript">
+        
+</script>
+      
+       
+
+	</body>
+</html>

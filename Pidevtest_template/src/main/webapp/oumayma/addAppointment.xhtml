@@ -1,0 +1,231 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" xmlns:b="http://bootsfaces.net/ui"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	template="/template/template.xhtml">
+	<ui:param name="page_name" value="Accueil" />
+	<ui:define name="content">
+<h:panelGrid columns="2" styleClass="ligne">
+		<link rel="stylesheet" type="text/css" href="like.css" media="screen" />
+		        <link rel="stylesheet" href="swipe.css" />
+		        		        <link rel="stylesheet" href="heart.css" />
+		        		        
+		        
+		
+
+
+
+ <h:form id="form" enctype="multipart/form-data">
+ <table>
+ <tr><td>
+ 
+  				               <h1>Add an Appointment</h1>
+  				            
+ <section class="newslatter-section" text-align="center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="newslatter-text">
+                       <style type="text/css">
+      html, body {
+        background-color: #eee;
+        font-family: tahoma;
+        font-size: 100%;
+        height: 100%;
+        width: 100%;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      td {
+        text-align: center;
+      }
+      #box {
+        background-color: #cc0000;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        padding: 10px 0 10px 0;
+      }
+      #container {
+        height: 100%;
+        vertical-align: center;
+        width: 100%;
+      }
+      #clock {
+        fill: #ffffff;
+        stroke: #000;
+        stroke-linecap: round;
+      }
+      #surface, #h_pointer {
+        stroke-width: 5px;
+      }
+      #delimiters, #s_pointer {
+        stroke-width: 1px;
+      }
+      #m_pointer {
+        stroke-width: 3px;
+      }
+      #numbers {
+        font-family: sans-serif;
+        font-size: 100%;
+      }
+    </style>
+    <script language="javascript" type="text/javascript">
+      function timerTick() {
+        with (new Date()) {
+          var h, m, s;
+          
+          h = 30 * ((getHours() % 12) + getMinutes() / 60);
+          m = 6 * getMinutes();
+          s = 6 * getSeconds();
+
+          document.getElementById('h_pointer').setAttribute('transform', 'rotate(' + h + ', 50, 50)');
+          document.getElementById('m_pointer').setAttribute('transform', 'rotate(' + m + ', 50, 50)'); 
+          document.getElementById('s_pointer').setAttribute('transform', 'rotate(' + s + ', 50, 50)');
+          
+          setTimeout(timerTick, 1000);
+        }
+      }
+    </script>
+  <body onload='timerTick()'>
+    <noscript><div id='box'>Please, enable JavaScript and refresh page.</div></noscript>
+    <table id='container'>
+      <tr>
+        <td>
+          <svg id='clock' viewBox='0 0 100 100' width='350' height='350'>
+            <circle id='surface' cx='50' cy='50' r='45'/>
+            <g id='pointers'>
+              <line id='h_pointer' x1='50' y1='50' x2='50' y2='27' />
+              <line id='m_pointer' x1='50' y1='50' x2='50' y2='17' />
+              <line id='s_pointer' x1='50' y1='50' x2='50' y2='13' />
+            </g>
+            <g id='numbers'>
+              <text x='43' y='18'>12</text>
+              <text x='85' y='54'>3</text>
+              <text x='47' y='91'>6</text>
+              <text x='9' y='54'>9</text>
+            </g>
+          </svg>
+        </td>
+      </tr>
+    </table>
+    </body>                 
+ 
+        <h4>If you are interested join us and <br>fixe an Appointment</br></h4>
+                      <h:form>
+                           <section class="hotel-rooms spad">
+
+			<div class="container">
+  				<div class="contact-form" >
+				<div class="row">
+				
+ 
+    
+                        <h:head>
+
+  
+		<title>Calendar</title>
+		<script name="jquery/jquery.js" library="primefaces"></script>
+	</h:head>
+                           <table>
+
+  
+			 <h:body>
+     <h:form>
+	
+		<tr><td><h:outputText  class="name" value="Date Appointment" /></td>
+		<td>	<p:calendar class="beds" value="#{appointmentController.dateAppointement}" placeholder="choose a date for your appointment"></p:calendar></td></tr>
+	
+</h:form></h:body>
+
+
+<tr><td><h:outputText value="Hour" class="beds" /></td>
+<td><h:inputText  class="name" id="heure"
+
+ value="#{appointmentController.heure}"
+ placeholder="Choose an hour for your Appointment"
+ required="true"
+ requiredMessage="you must choose an hour for your appointment"
+ validatorMessage="the hour chosen must be between 8am and 5pm//">
+  <f:validateDoubleRange minimum="8" maximum="16" for="heure"></f:validateDoubleRange>
+      <f:converter converterId="javax.faces.Integer" />
+  
+ </h:inputText></td></tr>
+ 
+ 
+ <tr><h:message for="heure" style="color.green"/></tr>
+
+
+
+
+
+
+<h:form>
+<tr><td><h:commandButton class="site-btn c-btn"  id="btn" value="Send" action="#{appointmentController.addAppointment()}" />
+<h:message for="btn"/></td></tr>
+</h:form>
+
+
+
+
+
+<tr><td><h:commandButton class="site-btn c-btn"  id="bt" value="My Appointments" action="#{appointmentController.show()}" /></td></tr>
+
+ 
+
+
+
+<tr><td><h:commandButton class="site-btn c-btn"  id="bot" value="Received Appointments" action="#{appointmentController.show2}" /></td>
+</tr>
+
+<tr><td><h:commandButton class="site-btn c-btn"  id="bttn" value="Chat" action="#{appointmentController.chat}" /></td></tr>
+<tr><td><h:commandButton class="site-btn c-btn"  id="bn" value="Virtual Visit" action="#{appointmentController.virtualVisit()}" /></td></tr>
+
+
+
+
+
+
+
+
+</table>
+                        
+     
+    
+
+
+
+
+	
+ 
+ 
+
+  
+        
+ 
+     
+</div></div></div></section>
+                 </h:form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </td>
+    <td>
+    
+     <div class="col-lg-12 text-center">
+                    <div class="newslatter-text">
+                      <link href='https://fonts.googleapis.com/css?family=Cedarville+Cursive' rel='stylesheet' type='text/css'></link>
+<h2>Our main goal is to provides you with the finest services and guarantee them do not hesitate and fixe an Appointment
+</h2></div></div>
+
+    </td>
+    
+   </tr>
+ 		</table>		              
+</h:form></h:panelGrid></ui:define></ui:composition>

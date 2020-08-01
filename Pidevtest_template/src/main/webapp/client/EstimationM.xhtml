@@ -1,0 +1,614 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" xmlns:b="http://bootsfaces.net/ui"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+
+
+	<head>
+
+<meta charset="UTF-8" />
+<meta name="description" content="Homes Template" />
+<meta name="keywords" content="Homes, unica, creative, html" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+<title>Homes Page | Template</title>
+
+ <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+        rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900i" rel="stylesheet"/>
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="../resources/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../resources/css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../resources/css/nice-select.css" type="text/css"/>
+    <link rel="stylesheet" href="../resources/css/owl.carousel.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../resources/css/jquery-ui.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../resources/css/slicknav.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../resources/css/flaticon.css" type="text/css"/>
+    <link rel="stylesheet" href="../resources/css/style.css" type="text/css"/>
+   
+   
+   
+   <!-- menu -->
+    <link rel="stylesheet" href="../resources/menu/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../resources/menu/vendors/linericon/style.css"/>
+    <link rel="stylesheet" href="../resources/menu/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../resources/menu/vendors/owl-carousel/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="../resources/menu/vendors/lightbox/simpleLightbox.css"/>
+    <link rel="stylesheet" href="../resources/menu/vendors/nice-select/css/nice-select.css"/>
+    <link rel="stylesheet" href="../resources/menu/vendors/animate-css/animate.css"/>
+    <link rel="stylesheet" href="../resources/menu/vendors/flaticon/flaticon.css"/>
+    <!-- main css -->
+    <link rel="stylesheet" href="../resources/menu/css/style.css"/>
+    <link rel="stylesheet" href="../resources/menu/css/responsive.css"/>
+   <!-- Menu -->
+   
+   
+
+ 
+
+<!-- <script language="javascript" type="text/javascript" src="step.js"></script>
+	<link rel="stylesheet" type="text/css" href="step.css">  -->
+<link
+	href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css' />
+<script
+	src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script
+	src='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
+<link
+	href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' />
+
+<link rel="stylesheet" href="../resources/estimation/step.css"
+	type="text/css" />
+<script src="../resources/estimation/step.js"></script>
+
+<SCRIPT>
+	function onCheckboxChanged(checked) {
+		if (checked)
+			$("#hiddenRow").fadeIn(500, 'linear');
+
+		else
+			$("#hiddenRow").fadeOut(900, 'linear');
+	}
+	function onCheckboxChanged1(checked) {
+		if (checked)
+			$("#hiddenRow1").fadeIn(500, 'linear');
+
+		else
+			$("#hiddenRow1").fadeOut(900, 'linear');
+	}
+	function onCheckboxChanged2(checked) {
+		if (checked)
+			$("#hiddenRow2").fadeIn(500, 'linear');
+
+		else
+			$("#hiddenRow2").fadeOut(900, 'linear');
+	}
+	function onCheckboxChanged3(checked) {
+		if (checked)
+			$("#hiddenRow3").fadeIn(500, 'linear');
+
+		else
+			$("#hiddenRow3").fadeOut(900, 'linear');
+	}
+	
+	function myFunction() {
+		  var x = document.getElementById("myDIV");
+		  if (x.style.display === "none") {
+		    x.style.display = "block";
+		  } else {
+		    x.style.display = "none";
+		  }
+		}
+		
+		function myFunction1() {
+			  var x = document.getElementById("myDIV1");
+			  if (x.style.display === "none") {
+			    x.style.display = "block";
+			  } else {
+			    x.style.display = "none";
+			  }
+			}
+		function myFunction2() {
+			  var x = document.getElementById("myDIV2");
+			  if (x.style.display === "none") {
+			    x.style.display = "block";
+			  } else {
+			    x.style.display = "none";
+			  }
+			}
+	
+</SCRIPT>
+
+	</head>
+
+
+
+	<body>
+
+		<!-- Header Section Begin -->
+		
+
+<header class="header_area">
+            <div class="top_menu">
+                <div class="container">
+                    <div class="top_inner">
+                        <div class="float-left">
+                            <a href="#">Visit Us</a>
+                            <a href="#">Online Support</a>
+                        </div>
+                        <div class="float-right">
+                            <ul class="list header_socila">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main_menu" id="mainNav">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""/><img src="img/logo-2.png" alt="" /></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                            <ul class="nav navbar-nav menu_nav ml-auto">
+                                <li class="nav-item active"><a class="nav-link" href="../client/Accueil.jsf">Home</a></li>
+                                <li class="nav-item active"><a class="nav-link" href="../client/AddAd.jsf">Post your House</a></li> 
+                                <li class="nav-item"><a class="nav-link" href="../client/AdVente.jsf">Sell</a></li> 
+                                <li class="nav-item submenu dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Rent</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item"><a class="nav-link" href="../client/AdRent.jsf">Rent</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="../client/AdHRent.jsf">Holiday Renting</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="../client/AdTRent.jsf">Temporary Renting</a></li>
+                                    </ul>
+                                </li> 
+                                <li class="nav-item submenu dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Estimate</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item"><a class="nav-link" href="../client/EstimationAccueil.jsf">Property Estimate</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="../client/EstimationAccueilLoyer.jsf">Rent Estimate</a></li>
+                                    </ul>
+                                </li> 
+                                <li class="nav-item"><a class="nav-link" href="contact.html">Credit Simulation</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contact.html">Furniture</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                                <li class="nav-item submenu dropdown">
+                                    <a href="../client/Profil.jsf" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account</a>
+                                    <ul class="dropdown-menu">
+                                     	<li class="nav-item"><a class="nav-link" href="../client/Profil.jsf">Profil</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="../Login/login.jsf">LogOut</a></li>
+                                    </ul>
+                                </li> 
+                                
+                            </ul>
+                        </div> 
+                    </div>
+                </nav>
+            </div>
+        </header>
+		<!-- Header Section End -->
+		<!-- Hero Section Begin -->
+		<section class="hero-section home-page set-bg"
+			data-setbg="../resources/img/bg.jpg">
+			<div class="container hero-text text-white">
+				<h1>Free online property valuation</h1>
+				<p:separator />
+				<h3>Get the price of your house or apartment in 2 minutes</h3>
+				<p:separator />
+			</div>
+		</section>
+
+		<section style="margin-left: -300px; margin-bottom: 100px;">
+			<div class="container-fluid">
+				<div class="row justify-content-center">
+					<div
+						class="col-11 col-sm-9 col-md-7 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2">
+						<div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+							<h2 id="heading">Estimate Your House</h2>
+							<p>Fill all form field to go to next step</p>
+							<h:form id="msform">
+								<!-- progressbar -->
+								<ul id="progressbar" style="margin-left: 150px;">
+									<li class="active" id="account"><strong>Step1</strong></li>
+									<li id="personal"><strong>Step2</strong></li>
+									<li id="payment"><strong>Step3</strong></li>
+								</ul>
+								<div class="progress">
+									<div
+										class="progress-bar progress-bar-striped progress-bar-animated"
+										role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+								<br />
+								<!-- fieldsets -->
+								<fieldset>
+									<div class="form-card">
+										<div class="row">
+											<div class="col-7">
+												<h2 class="fs-title">Main information of the property:</h2>
+											</div>
+											<div class="col-5">
+												<h2 class="steps">Step 1 - 3</h2>
+											</div>
+										</div>
+										<h:outputLabel class="fieldlabels" value="Location: *" ></h:outputLabel>
+										<!-- <h:inputText value="#{estimationControllerJsf.ville}"
+													a:placeholder="Location" required="true"></h:inputText>	 -->		
+										<p:spacer width="90" height="10" />	
+										<h:selectOneMenu
+												value="#{estimationControllerJsf.ville}">
+											<f:selectItems value="#{achatLocationControllerJsf.cities}" var="role"
+												itemLabel="#{role}" itemValue="#{role}" />
+										</h:selectOneMenu><br/>		
+											
+										<h:outputLabel class="fieldlabels" value="Total Area: *"></h:outputLabel>
+										<h:inputText value="#{estimationControllerJsf.surfaceTotal}" ></h:inputText>
+										<h:outputLabel class="fieldlabels"
+											value="Habitable Area: *"></h:outputLabel>
+										<h:inputText
+											value="#{estimationControllerJsf.surfaceConstruit}"></h:inputText>
+										<h:outputLabel class="fieldlabels" value="Habitable levels: *	"></h:outputLabel>
+										<p:spacer width="20" height="20" />
+										<h:inputText style="width:60px"
+											value="#{estimationControllerJsf.nbNiveaux}"></h:inputText>
+										<p:spacer width="40" height="40" />
+										<h:outputLabel class="fieldlabels" value="Number of Piece: *	"></h:outputLabel>
+										<p:spacer width="20" height="20" />
+										<h:inputText style="width:60px"
+											value="#{estimationControllerJsf.nbPiece}"></h:inputText>
+										<br />
+										<h:outputLabel class="fieldlabels" value="Number of Rooms: *	"></h:outputLabel>
+										<p:spacer width="20" height="20" />
+										<h:inputText style="width:60px"
+											value="#{estimationControllerJsf.nbChambre}"></h:inputText>
+										<p:spacer width="40" height="40" />
+										<h:outputLabel class="fieldlabels" value="Number of Bathrooms: *	"></h:outputLabel>
+										<p:spacer width="20" height="20" />
+										<h:inputText style="width:60px"
+											value="#{estimationControllerJsf.nbBathrooms}"></h:inputText>
+								
+									</div>
+									<input type="button" name="next" class="next action-button"
+										value="Next" onclick="myFunction();myFunction1()"/>
+								</fieldset>
+								<fieldset>
+									<div class="form-card">
+										<div class="row">
+											<div class="col-7">
+												<h2 class="fs-title">Characteristics of the property:</h2>
+											</div>
+											<div class="col-5">
+												<h2 class="steps">Step 2 - 3</h2>
+											</div>
+										</div>
+										<h:outputLabel class="fieldlabels" value="Balcony"></h:outputLabel>
+										<h:selectBooleanCheckbox style="margin-left:-180px"
+											value="#{estimationControllerJsf.balcon}"
+											onchange="onCheckboxChanged3(this.checked)"></h:selectBooleanCheckbox>
+
+										<div id="hiddenRow3" style="display: none;">
+											<h:outputText class="fieldlabels" value="Balcon area"></h:outputText>
+											<h:inputText value="#{estimationControllerJsf.surfaceB}"></h:inputText>
+										</div>
+
+										<br />
+										<h:outputLabel class="fieldlabels" value="Terrace"></h:outputLabel>
+										<h:selectBooleanCheckbox style="margin-left:-180px"
+											value="#{estimationControllerJsf.terrace}"
+											onchange="onCheckboxChanged1(this.checked)"></h:selectBooleanCheckbox>
+
+										<div id="hiddenRow1" style="display: none;">
+											<h:outputText class="fieldlabels" value="Terrace area"></h:outputText>
+											<h:inputText value="#{estimationControllerJsf.surfaceT}"></h:inputText>
+										</div>
+
+										<br />
+										<h:outputLabel class="fieldlabels" value="SwimmingPool"></h:outputLabel>
+										<h:selectBooleanCheckbox style="margin-left:-235px"
+											value="#{estimationControllerJsf.swimmingPool}"
+											onchange="onCheckboxChanged2(this.checked)"></h:selectBooleanCheckbox>
+
+										<div id="hiddenRow2" style="display: none;">
+											<h:outputText class="fieldlabels" value="Swimmingpool area"></h:outputText>
+											<h:inputText value="#{estimationControllerJsf.surfaceP}"></h:inputText>
+											<h:outputText class="fieldlabels" value="Swimmingpool Type"></h:outputText>
+											<h:selectOneMenu value="#{estimationControllerJsf.typeP}">
+												<f:selectItem itemLabel="Choose Type" itemValue="#{null}" />
+												<f:selectItems
+													value="#{estimationControllerJsf.typePiscines}" />
+											</h:selectOneMenu>
+										</div>
+
+										<br />
+										<h:outputLabel class="fieldlabels" value="Garden"></h:outputLabel>
+										<h:selectBooleanCheckbox style="margin-left:-180px"
+											value="#{estimationControllerJsf.garden}"></h:selectBooleanCheckbox>
+										<br />
+										<h:outputLabel class="fieldlabels" value="Garage"></h:outputLabel>
+										<h:selectBooleanCheckbox style="margin-left:-180px"
+											value="#{estimationControllerJsf.garage}"></h:selectBooleanCheckbox>
+										<br />
+										<h:outputLabel class="fieldlabels" value="AirConditioning"></h:outputLabel>
+										<h:selectBooleanCheckbox style="margin-left:-240px"
+											value="#{estimationControllerJsf.airConditioning}"></h:selectBooleanCheckbox>
+										<br />
+										<h:outputLabel class="fieldlabels" value="Heater"></h:outputLabel>
+										<h:selectBooleanCheckbox style="margin-left:-175px"
+											value="#{estimationControllerJsf.heater}"></h:selectBooleanCheckbox>
+										<br/>
+										<h:outputLabel class="fieldlabels"
+											value="surveillance camera"></h:outputLabel>
+										<h:selectBooleanCheckbox style="margin-left:-270px"
+											value="#{estimationControllerJsf.camSurveillance}"></h:selectBooleanCheckbox>
+										<br />
+										<h:outputLabel class="fieldlabels" value="Alarm system"></h:outputLabel>
+										<h:selectBooleanCheckbox style="margin-left:-230px"
+											value="#{estimationControllerJsf.alarme}"></h:selectBooleanCheckbox>
+
+
+
+										<br />
+										<h:outputLabel class="fieldlabels" value="Basement"></h:outputLabel>
+										<h:selectBooleanCheckbox style="margin-left:-200px"
+											value="#{estimationControllerJsf.cave}"
+											onchange="onCheckboxChanged(this.checked)"></h:selectBooleanCheckbox>
+
+
+										<div id="hiddenRow" style="display: none;">
+											<h:outputLabel class="fieldlabels" value="Basement area"></h:outputLabel>
+											<h:inputText value="#{estimationControllerJsf.surfaceC}"></h:inputText>
+											<h:outputLabel class="fieldlabels" value="Basement Type"></h:outputLabel>
+											<h:selectOneMenu value="#{estimationControllerJsf.typeCave}">
+
+												<f:selectItem itemLabel="choose Type" itemValue="#{null}" />
+												<f:selectItems value="#{estimationControllerJsf.typeCaves}" />
+											</h:selectOneMenu>
+										</div>
+
+									</div>
+										<input type="button" name="next" class="next action-button"	value="Next" onclick="myFunction1();myFunction2()"/> 
+									<input type="button" name="previous" class="previous action-button-previous" value="Previous" onclick="myFunction();myFunction1();"/>
+								</fieldset>
+								<fieldset>
+									<div class="form-card">
+										<div class="row">
+											<div class="col-7">
+												<h2 class="fs-title">More details of your property:</h2>
+											</div>
+											<div class="col-5">
+												<h2 class="steps">Step 3 - 3</h2>
+											</div>
+										</div>
+										<h:outputLabel class="fieldlabels" value="Is your house calm?"></h:outputLabel>
+										<h:selectBooleanCheckbox style="margin-left:-210px"
+											value="#{estimationControllerJsf.calme}"></h:selectBooleanCheckbox>
+										<br />
+										<h:outputLabel class="fieldlabels" value="Work needed?"></h:outputLabel>
+										<h:selectBooleanCheckbox style="margin-left:-170px"
+											value="#{estimationControllerJsf.traveaux}"></h:selectBooleanCheckbox>
+										<br />
+										<h:outputLabel class="fieldlabels" value="Do you have a Depandency?"></h:outputLabel>
+										<h:selectBooleanCheckbox style="margin-left:-270px"
+											value="#{estimationControllerJsf.dependance}"></h:selectBooleanCheckbox>
+										<br />
+										<h:outputLabel class="fieldlabels" value="Standing: "></h:outputLabel>
+										<p:spacer width="35" height="35" />
+										<h:selectOneMenu
+											value="#{estimationControllerJsf.standing}">
+											<f:selectItem itemLabel="choose Type" itemValue="#{null}" />
+											<f:selectItems
+												value="#{estimationControllerJsf.standings}" />
+										</h:selectOneMenu>
+										<br />
+										<h:outputLabel class="fieldlabels" value="Orientation: "></h:outputLabel>
+										<p:spacer width="20" height="20" />
+										<h:selectOneMenu
+											value="#{estimationControllerJsf.orientation}">
+											<f:selectItem itemLabel="choose Type" itemValue="#{null}" />
+											<f:selectItems
+												value="#{estimationControllerJsf.orientations}" />
+										</h:selectOneMenu>
+										<br />
+										<h:outputLabel class="fieldlabels" value="View: "></h:outputLabel>
+										<p:spacer width="50" height="50" />
+										<h:selectOneMenu value="#{estimationControllerJsf.vue}">
+											<f:selectItem itemLabel="choose Type" itemValue="#{null}" />
+											<f:selectItems value="#{estimationControllerJsf.vues}" />
+										</h:selectOneMenu>
+
+									</div><br/><br/>
+							<h:commandButton style="width:100px;" value="Estimer" 
+											action="#{estimationControllerJsf.estimerMaison()}" /> 
+										<input type="button" name="previous" class="previous action-button-previous" value="Previous" onclick="myFunction2();myFunction1();"/>
+							
+								</fieldset>
+								
+								
+							</h:form>
+						</div>
+					</div>
+				</div>
+			</div>					
+		</section>
+
+
+ <div id="myDIV1" style="margin-left:950px; margin-bottom: 550px; margin-top:-700px; display:none;">
+    	<p:graphicImage value="../resources/img/estimation/rent.jpg" style="width:370px;" /><br/>
+    	<h:form><p:commandButton value="Estimate rental" action="#{estimationControllerJsf.redirectToEstLoyer()}" style="margin-left:30px;margin-top:3px;width:320px;"></p:commandButton></h:form>
+    </div>
+  
+   <div id="myDIV2" style="margin-left:950px; margin-bottom: 400px; margin-top:-750px;display:none;">
+  		<h4 style="width:300px;">Contact a real estate agency for a precise estimate</h4>
+    	<p:graphicImage value="../resources/img/estimation/agence.png" style="width:300px;" /><br/>
+    	<p style="margin-top:6px; width:300px">75% of sellers contact a professional to obtain a reliable estimate and thus sell at the best price.</p>
+    </div>
+    
+      <div id="myDIV" style="margin-left:950px; margin-bottom: 400px; margin-top:-750px; ">
+     	<p:graphicImage value="../resources/img/est.png" style="width:300px;" /><br/>
+    	<p style="margin-top:6px; width:300px">Our Dari.tn simulator allows you to quickly obtain a reliable and complete estimate of your property online and in real time.<br/>
+		You fill in a few clicks the main characteristics of your house or apartment and you immediately get a fair assessment of the 
+		accommodation described.<br/> You can make as many estimates as you want by varying the criteria entered: the Dari.tn tool is completely 
+		free and at your disposal!</p>
+    </div>
+  
+  
+
+
+		<!-- Footer Section Begin -->
+		<footer class="footer-section">
+			<!-- Rooms Pic Section Begin-->
+			<div class="room-pic">
+				<div class="container-fluid">
+					<div class="row sp-40">
+						<img src="../resources/img/room-pic/1.jpg" alt="" /> <img
+							src="../resources/img/room-pic/2.jpg" alt="" /> <img
+							src="../resources/img/room-pic/3.jpg" alt="" /> <img
+							src="../resources/img/room-pic/4.jpg" alt="" /> <img
+							src="../resources/img/room-pic/5.jpg" alt="" />
+					</div>
+				</div>
+			</div>
+			<!-- Rooms Pic Section End -->
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center sp-60">
+						<img src="../resources/img/only-logo.png" alt="" />
+					</div>
+				</div>
+				<div class="row p-37">
+					<div class="col-lg-4">
+						<div class="about-footer">
+							<h5>About Homes</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+								Donec eleifend tristique venenatis. Maecenas a rutrum tellus nam
+								vel semper nibh.</p>
+							<div class="footer-social">
+								<a href="#"><i class="fa fa-pinterest"></i></a> <a href="#"><i
+									class="fa fa-facebook"></i></a> <a href="#"><i
+									class="fa fa-twitter"></i></a> <a href="#"><i
+									class="fa fa-dribbble"></i></a> <a href="#"><i
+									class="fa fa-behance"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<div class="footer-blog">
+							<h5>Latest Blog Posts</h5>
+
+							<div class="single-blog">
+								<div class="lt-side">
+									<img src="../resources/img/footer-blog-1.jpg" alt="" />
+								</div>
+								<div class="rt-side">
+									<h6>
+										How to find the perfect area for<br /> your next house.
+									</h6>
+									<div class="blog-time">
+										<i class="flaticon-clock"></i> <span>5 min</span>
+									</div>
+									<a href="#" class="read-more"> <i
+										class="flaticon-right-arrow-1"></i> <span>Read More</span>
+									</a>
+								</div>
+							</div>
+							<div class="single-blog">
+								<div class="lt-side">
+									<img src="../resources/img/footer-blog-2.jpg" alt="" />
+								</div>
+								<div class="rt-side">
+									<h6>
+										How to find the perfect area for<br /> your next house.
+									</h6>
+									<div class="blog-time">
+										<i class="flaticon-clock"></i> <span>5 min</span>
+									</div>
+									<a href="#" class="read-more"> <i
+										class="flaticon-right-arrow-1"></i> <span>Read More</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<div class="footer-address">
+							<h5>Get In Touch</h5>
+							<ul>
+								<li><i class="flaticon-placeholder"></i><span>132
+										Liberty Streetelit, Plano, Texas</span></li>
+								<li><i class="flaticon-envelope"></i><span>hello@home.com</span></li>
+								<li><i class="flaticon-smartphone"></i><span>214-805-4428</span></li>
+							</ul>
+							<p>Monday – Friday: 9 am – 5 pm</p>
+							<p>Saturday: 9 am – 1pm</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="row p-20">
+					<div class="col-lg-12 text-center">
+						<div class="copyright">
+							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							Copyright
+							<!--&copy;-->
+							<script>
+								document.write(new Date().getFullYear());
+							</script>
+							All rights reserved | This template is made with <i
+								class="fa fa-heart-o" aria-hidden="true"></i> by <a
+								href="https://colorlib.com" target="_blank">Colorlib</a>
+							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- Footer Section End -->
+
+		<!-- Js Plugins -->
+		<script src="../resources/js/jquery-3.3.1.min.js"></script>
+		<script src="../resources/js/bootstrap.min.js"></script>
+		<script src="../resources/js/jquery.nice-select.min.js"></script>
+		<script src="../resources/js/owl.carousel.min.js"></script>
+		<script src="../resources/js/jquery-ui.min.js"></script>
+		<script src="../resources/js/jquery.slicknav.js"></script>
+		<script src="../resources/js/main.js"></script>
+
+<!-- Menu -->
+   
+    <script src="../resources/menu/js/popper.js"></script>
+    <script src="../resources/menu/js/bootstrap.min.js"></script>
+    <script src="../resources/menu/js/stellar.js"></script>
+    <script src="../resources/menu/vendors/lightbox/simpleLightbox.min.js"></script>
+    <script src="../resources/menu/js/jquery.ajaxchimp.min.js"></script>  
+        <!--gmaps Js-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+    <script src="../resources/menu/js/gmaps.min.js"></script>
+    <script src="../resources/menu/js/theme.js"></script>
+    
+	</body>
+
+
+
+
+
+
+
+
+
+
+
+</ui:composition>

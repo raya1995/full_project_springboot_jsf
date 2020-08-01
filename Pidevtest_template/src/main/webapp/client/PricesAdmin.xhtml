@@ -1,0 +1,467 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" xmlns:b="http://bootsfaces.net/ui"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	template="/template/templateDash.xhtml">
+	<ui:param name="page_name" value="Accueil" />
+	<ui:define name="content">
+
+		<h:head>
+			<style type="text/css">
+.ui-chart {
+	margin-bottom: 50px;
+}
+</style>
+		</h:head>
+
+		<body class="padTop53 ">
+
+			<div id="wrap">
+
+				<!-- HEADER SECTION -->
+				<div id="top">
+
+					<nav class="navbar navbar-inverse navbar-fixed-top "
+						style="padding-top: 10px;">
+						<a data-original-title="Show/Hide Menu" data-placement="bottom"
+							data-tooltip="tooltip"
+							class="accordion-toggle btn btn-primary btn-sm visible-xs"
+							data-toggle="collapse" href="#menu" id="menu-toggle"> <i
+							class="icon-align-justify"></i>
+						</a>
+						<!-- LOGO SECTION -->
+						<header class="navbar-header">
+
+							<a href="index.html" class="navbar-brand"> <img
+								src="assets/img/logo.png" alt="" /></a>
+						</header>
+						<!-- END LOGO SECTION -->
+						<ul class="nav navbar-top-links navbar-right">
+
+							<!-- MESSAGES SECTION -->
+							<li class="dropdown"><a class="dropdown-toggle"
+								data-toggle="dropdown" href="#"> <span
+									class="label label-success">2</span> <i class="icon-bell"></i>
+									<i class="icon-chevron-down"></i>
+
+							</a>
+
+
+								<ul class="dropdown-menu dropdown-messages">
+									<li><a href="#">
+											<div>
+												<strong>notifications</strong> <span
+													class="pull-right text-muted"> </span>
+											</div>
+											<div>
+												#{appointmentController.notificationJustification()} <br />
+												<span class="label label-primary">new justification
+													added</span>
+
+											</div>
+									</a></li>
+
+									<li class="divider"></li>
+									<li><a href="#">
+
+											<div>
+												#{appointmentController.notificationConfirmation()} <br />
+												<span class="label label-success">new Appointment was
+													Confirmed </span>
+											</div>
+									</a></li>
+									<li class="divider"></li>
+									<li><a href="#">
+
+											<div>
+												#{appointmentController.notificationAnnulation()} <br /> <span
+													class="label label-danger"> Appointment canceled </span>
+											</div>
+									</a></li>
+
+									<li class="divider"></li>
+									<li><a class="text-center" href="#"> <strong>show
+												all notifications</strong> <i class="icon-angle-right"></i>
+									</a></li>
+								</ul></li>
+							<!--END MESSAGES SECTION -->
+
+
+							<!--END TASK SECTION -->
+
+
+
+							<!--ADMIN SETTINGS SECTIONS -->
+
+							<li class="dropdown"><a class="dropdown-toggle"
+								data-toggle="dropdown" href="#"> <i class="icon-user "></i>
+									<i class="icon-chevron-down "></i>
+							</a>
+
+								<ul class="dropdown-menu dropdown-user">
+									<li><a href="#"><i class="icon-user"></i> User Profile
+									</a></li>
+									<li><a href="#"><i class="icon-gear"></i> Settings </a></li>
+									<li class="divider"></li>
+									<li><a href="../Login/login.jsf"><i class="icon-signout"></i>
+											Logout </a></li>
+								</ul></li>
+							<!--END ADMIN SETTINGS -->
+						</ul>
+
+					</nav>
+
+				</div>
+				<!-- END HEADER SECTION -->
+
+
+
+
+				<!-- MENU SECTION -->
+				<div id="left">
+					<div class="media user-media well-small">
+						<a class="user-link" href="#"> <img
+							class="media-object img-thumbnail user-img" alt="User Picture"
+							src="../resources/assets/img/user.gif" />
+						</a> <br />
+						<div class="media-body">
+							<h5 class="media-heading">Loua Ben Khaddouma</h5>
+							<ul class="list-unstyled user-info">
+
+								<li><a class="btn btn-success btn-xs btn-circle"
+									style="width: 10px; height: 12px;"></a> Online</li>
+
+							</ul>
+						</div>
+						<br />
+					</div>
+
+					<ul id="menu" class="collapse">
+
+
+						<li class="panel "><a href="#" data-parent="#menu"
+							data-toggle="collapse" class="accordion-toggle"
+							data-target="#component-nav"> <i class="icon-tasks"> </i> UI
+								Elements <span class="pull-right"> <i
+									class="icon-angle-left"></i>
+							</span> <span class="label label-default">10</span>
+						</a>
+							<ul class="collapse" id="component-nav">
+
+
+								<li class=""><a href="notification.xhtml"><i
+										class="icon-angle-right"></i> Notification </a></li>
+
+							</ul></li>
+
+
+
+						<li class="panel"><a href="#" data-parent="#menu"
+							data-toggle="collapse" class="accordion-toggle"
+							data-target="#chart-nav"> <i class="icon-bar-chart"></i>
+								Charts <span class="pull-right"> <i
+									class="icon-angle-left"></i>
+							</span>
+						</a>
+							<ul class="collapse" id="chart-nav">
+
+								<li><a href="StatistiqueEst.jsf"><i
+										class="icon-angle-right"></i> Estimate Charts </a></li>
+
+							</ul></li>
+
+						<li class="panel"><a href="#" data-parent="#menu"
+							data-toggle="collapse" class="accordion-toggle"
+							data-target="#chart-nav1"> <i class="icon-table"></i> Data
+								Tables <span class="pull-right"> <i
+									class="icon-angle-left"></i>
+							</span>
+						</a>
+							<ul class="collapse" id="chart-nav1">
+
+								<li><a href="PricesAdmin.jsf"><i
+										class="icon-angle-right"></i> Prices per m² </a></li>
+
+							</ul></li>
+
+
+						<li><a href="gallery.html"><i class="icon-film"></i>
+								Image Gallery </a></li>
+						<li><a href="maps.html"><i class="icon-map-marker"></i>
+								Maps </a></li>
+
+					</ul>
+
+				</div>
+				<!--END MENU SECTION -->
+
+
+
+				<!--PAGE CONTENT -->
+				 
+				<h:form>
+					<div id="content">
+
+						<div class="inner" style="min-height: 1200px;">
+							<div class="row">
+								<div class="col-lg-12">
+
+
+									<h2>Prices Per m²</h2>
+
+
+
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-12">
+									<div class="box dark">
+										<header>
+											<div class="icons">
+												<i class="icon-edit"></i>
+											</div>
+											<h4>Change the Prices below</h4>
+										</header>
+									</div>
+<h:panelGroup column="2">
+<h:form>
+									<table>
+
+
+										<tr>
+											<td><h:outputText value="Ville"
+													class="control-label col-lg-4" /></td>
+											<td><h:inputText 
+													value="#{achatLocationControllerJsf.ville}"	class="form-control">
+												</h:inputText></td>
+										</tr>
+										<tr>
+											<td><h:outputText value="Minimum Price"
+													class="control-label col-lg-4" /></td>
+											<td><h:inputText value="#{achatLocationControllerJsf.minpMaison}" 
+											class="form-control"></h:inputText></td>
+											
+											<td><h:outputText value="Minimum Price(Appartment)"
+													class="control-label col-lg-4" /></td>
+											<td><h:inputText 
+													value="#{achatLocationControllerJsf.minpAppart}" class="form-control"></h:inputText></td>
+										</tr>
+										<tr>
+											<td><h:outputText value="Average Price"
+													class="control-label col-lg-4" /></td>
+											<td><h:inputText
+													value="#{achatLocationControllerJsf.prixMaison}"	class="form-control">
+												</h:inputText></td>
+											
+											<td><h:outputText value="Average Price (Appartment)"
+													class="control-label col-lg-4" /></td>
+											<td><h:inputText 
+													value="#{achatLocationControllerJsf.prixAppart}"	class="form-control">
+												</h:inputText></td>
+										</tr>
+										<tr>
+											<td><h:outputText value="Maximum Price"
+													class="control-label col-lg-4" /></td>
+											<td><h:inputText 
+													value="#{achatLocationControllerJsf.maxpMaison}"
+													class="form-control"></h:inputText></td>
+													
+											<td><h:outputText value="Maximum Price(Appartment)"
+													class="control-label col-lg-4" /></td>
+											<td><h:inputText
+													value="#{achatLocationControllerJsf.maxpAppart}"
+													class="form-control"></h:inputText></td>
+										</tr>
+
+
+										<tr>
+											<td><h:commandButton value="Update Price"
+													action="#{achatLocationControllerJsf.updatePrix()}"
+													class="btn text-muted text-center btn-danger"/>
+											</td>
+											<td><h:commandButton value="Add"
+													action="#{achatLocationControllerJsf.addPrix()}"
+													class="btn text-muted text-center btn-danger"/>
+											</td>
+										</tr>
+
+
+									</table>
+</h:form>
+</h:panelGroup>
+
+
+									<div class="row">
+										<div class="col-lg-12">
+											<div class="box dark">
+												<header>
+													<div class="icons">
+														<i class="icon-th-large"></i>
+													</div>
+													<h4>Prices per m² of houses By city</h4>
+												</header>
+
+											</div>
+
+											<h:dataTable
+												class="table table-striped table-bordered table-hover"
+												id="dataTables-example"
+												value="#{achatLocationControllerJsf.prices}"
+												var="p" border="1"
+												filteredValue="#{p.ResRecherche}"
+												widgetVar="priceWidget"
+												emptyMessage="No cars found with given criteria">
+												<f:facet name="header">
+													<div id="dataTables-example_filter"
+														class="dataTables_filter">
+														<label>Search:<input type="search"
+															class="form-control input-sm"
+															aria-controls="dataTables-example"></input></label>
+													</div>
+												</f:facet>
+												<h:column filterBy="#{p.ville}"
+													filterMatchMode="contains">
+													<f:facet name="header">
+														<h:outputText value="ville" />
+													</f:facet>
+													<h:outputText value="#{p.ville}" />
+												</h:column>
+												<h:column filterBy="#{p.minpMaison}"
+													filterMatchMode="contains">
+													<f:facet name="header">
+														<h:outputText value="Prix minimum" />
+													</f:facet>
+													<h:outputText value="#{p.minpMaison}" />
+												</h:column>
+												<h:column
+													filterBy="#{p.prixMaison}"
+													filterMatchMode="contains">
+													<f:facet name="header">
+														<h:outputText value="Prix Moyen" />
+													</f:facet>
+													<h:outputText
+														value="#{p.prixMaison}" />
+												</h:column>
+												<h:column filterBy="#{p.maxpMaison}"
+													filterMatchMode="contains">
+													<f:facet name="header">
+														<h:outputText value="Prix Maximum" />
+													</f:facet>
+													<h:outputText value="#{p.maxpMaison}" />
+												</h:column>
+												
+
+												<h:column>
+													<f:facet name="header">
+														<h:outputText value="Action" />
+													</f:facet>
+													<h:commandButton value="Update"
+													action="#{achatLocationControllerJsf.displayPrice(p)}"
+														class="btn text-muted text-center btn-danger" />
+												
+												</h:column>
+
+											</h:dataTable>
+
+										</div>
+									</div>
+
+			
+								<div class="row">
+										<div class="col-lg-12">
+											<div class="box dark">
+												<header>
+													<div class="icons">
+														<i class="icon-th-large"></i>
+													</div>
+													<h4>Appartment Prices per m² By city</h4>
+												</header>
+
+											</div>
+
+											<h:dataTable
+												class="table table-striped table-bordered table-hover"
+												id="dataTables-example"
+												value="#{achatLocationControllerJsf.prices}"
+												var="p" border="1"
+												filteredValue="#{p.ResRecherche}"
+												widgetVar="priceWidget"
+												emptyMessage="No cars found with given criteria">
+												<f:facet name="header">
+													<div id="dataTables-example_filter"
+														class="dataTables_filter">
+														<label>Search:<input type="search"
+															class="form-control input-sm"
+															aria-controls="dataTables-example"></input></label>
+													</div>
+												</f:facet>
+												<h:column filterBy="#{p.ville}"
+													filterMatchMode="contains">
+													<f:facet name="header">
+														<h:outputText value="ville" />
+													</f:facet>
+													<h:outputText value="#{p.ville}" />
+												</h:column>
+												<h:column filterBy="#{p.minpAppart}"
+													filterMatchMode="contains">
+													<f:facet name="header">
+														<h:outputText value="Prix minimum" />
+													</f:facet>
+													<h:outputText value="#{p.minpAppart}" />
+												</h:column>
+												<h:column
+													filterBy="#{p.prixAppart}"
+													filterMatchMode="contains">
+													<f:facet name="header">
+														<h:outputText value="Prix Moyen" />
+													</f:facet>
+													<h:outputText
+														value="#{p.prixAppart}" />
+												</h:column>
+												<h:column filterBy="#{p.maxpAppart}"
+													filterMatchMode="contains">
+													<f:facet name="header">
+														<h:outputText value="Prix Maximum" />
+													</f:facet>
+													<h:outputText value="#{p.maxpAppart}" />
+												</h:column>
+												
+
+												<h:column>
+													<f:facet name="header">
+														<h:outputText value="Action" />
+													</f:facet>
+													<h:commandButton value="Update"
+													action="#{achatLocationControllerJsf.displayPrice(p)}"	
+														class="btn text-muted text-center btn-danger" />
+											
+												</h:column>
+
+											</h:dataTable>
+
+										</div>
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</h:form>		 
+				<!--END PAGE CONTENT -->
+
+
+
+
+
+
+			</div>
+
+
+		</body>
+	</ui:define>
+</ui:composition>

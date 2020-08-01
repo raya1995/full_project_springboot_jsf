@@ -1,0 +1,532 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" xmlns:p1="http://primefaces.org/ui">
+
+
+
+
+	<h:head>
+		<title>Home</title>
+
+	<!-- Google Font -->
+	
+			<link
+			href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+			rel="stylesheet" />
+		
+		    <link rel="stylesheet" href="../resources/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../resources/css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../resources/css/nice-select.css" type="text/css"/>
+    <link rel="stylesheet" href="../resources/css/owl.carousel.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../resources/css/jquery-ui.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../resources/css/slicknav.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../resources/css/flaticon.css" type="text/css"/>
+    <link rel="stylesheet" href="../resources/css/style.css" type="text/css"/>
+   
+   
+   
+   <!-- menu -->
+    <link rel="stylesheet" href="../resources/menu/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../resources/menu/vendors/linericon/style.css"/>
+    <link rel="stylesheet" href="../resources/menu/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../resources/menu/vendors/owl-carousel/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="../resources/menu/vendors/lightbox/simpleLightbox.css"/>
+    <link rel="stylesheet" href="../resources/menu/vendors/nice-select/css/nice-select.css"/>
+    <link rel="stylesheet" href="../resources/menu/vendors/animate-css/animate.css"/>
+    <link rel="stylesheet" href="../resources/menu/vendors/flaticon/flaticon.css"/>
+    <!-- main css -->
+    <link rel="stylesheet" href="../resources/menu/css/style.css"/>
+    <link rel="stylesheet" href="../resources/menu/css/responsive.css"/>
+		
+		<h:outputStylesheet library="test" name="css/bootstrap.min.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/font-awesome.min.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/nice-select.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/owl.carousel.min.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/jquery-ui.min.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/slicknav.min.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/flaticon.css"></h:outputStylesheet>
+	    <h:outputStylesheet library="test" name="css/style.css"></h:outputStylesheet>
+
+
+	</h:head>
+
+
+
+	<h:body>
+
+		
+		<!-- Header Section Begin -->
+		 <header class="header_area">
+            <div class="top_menu">
+                <div class="container">
+                    <div class="top_inner">
+                        <div class="float-left">
+                            <a href="#">Visit Us</a>
+                            <a href="#">Online Support</a>
+                        </div>
+                        <div class="float-right">
+                            <ul class="list header_socila">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main_menu" id="mainNav">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""/><img src="img/logo-2.png" alt="" /></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                            <ul class="nav navbar-nav menu_nav ml-auto">
+                                <li class="nav-item active"><a class="nav-link" href="../client/Accueil.jsf">Home</a></li>
+                                <li class="nav-item active"><a class="nav-link" href="../client/AddAd.jsf">Post your House</a></li> 
+                                <li class="nav-item"><a class="nav-link" href="../client/AdVente.jsf">Sell</a></li> 
+                                <li class="nav-item submenu dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Rent</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item"><a class="nav-link" href="../client/AdRent.jsf">Rent</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="../client/AdHRent.jsf">Holiday Renting</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="../client/AdTRent.jsf">Temporary Renting</a></li>
+                                    </ul>
+                                </li> 
+                                <li class="nav-item submenu dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Estimate</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item"><a class="nav-link" href="../client/EstimationAccueil.jsf">Property Estimate</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="../client/EstimationAccueilLoyer.jsf">Rent Estimate</a></li>
+                                    </ul>
+                                </li> 
+                                <li class="nav-item"><a class="nav-link" href="contact.html">Credit Simulation</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contact.html">Furniture</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                                <li class="nav-item submenu dropdown">
+                                    <a href="../client/Profil.jsf" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More</a>
+                                    <ul class="dropdown-menu">
+                                     	<li class="nav-item"><a class="nav-link" href="../client/welcome.jsf">Profil</a></li>
+                                     	<li class="nav-item"><a class="nav-link" href="../client/Statistique.jsf">About Dari.tn</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="../Login/login.jsf">LogOut</a></li>
+                                    </ul>
+                                </li> 
+                                
+                            </ul>
+                        </div> 
+                    </div>
+                </nav>
+            </div>
+        </header>
+		<!-- Header Section End -->
+		<!-- Hero Section Begin -->
+		<section class="hero-section home-page set-bg"
+			data-setbg="#{resource['test:img/bg.jpg']}">
+			<div class="container hero-text text-white">
+				<h2>Find your next</h2>
+				<h1>dream home.</h1>
+			</div>
+		</section>
+		<!-- Hero Section End -->
+		<!-- Filter Search Section Begin -->
+		<div class="filter-search">
+			<div class="container ">
+				<div class="row">
+					<div class="col-lg-12">
+						<form class="filter-form">
+							<div class="location">
+								<p>Location</p>
+								<select class="filter-location">
+									<option value="">London</option>
+									<option value="">US</option>
+									<option value="">UAE</option>
+								</select>
+							</div>
+							<div class="search-type">
+								<p>Property Type</p>
+								<select class="filter-property">
+									<option value="">House</option>
+									<option value="">Resort</option>
+									<option value="">Hotel</option>
+								</select>
+							</div>
+							<div class="price-range">
+								<p>Price</p>
+								<div class="range-slider">
+									<div id="slider-range">
+										<div tabindex="0"
+											class="ui-slider-handle ui-corner-all ui-state-default slider-left">50k</div>
+										<div tabindex="0"
+											class="ui-slider-handle ui-corner-all ui-state-default slider-right">300k</div>
+									</div>
+								</div>
+							</div>
+							<div class="bedrooms">
+								<p>Bedrooms</p>
+								<div class="room-filter-pagi">
+									<div class="bf-item">
+										<input type="radio" name="room" id="room-1" /> <label
+											for="room-1">1</label>
+									</div>
+									<div class="bf-item">
+										<input type="radio" name="room" id="room-2" /> <label
+											for="room-2">2</label>
+									</div>
+									<div class="bf-item">
+										<input type="radio" name="room" id="room-3" /> <label
+											for="room-3">3</label>
+									</div>
+									<div class="bf-item">
+										<input type="radio" name="room" id="room-4" /> <label
+											for="room-4">4+</label>
+									</div>
+								</div>
+							</div>
+							<div class="bathrooms">
+								<p>Bathrooms</p>
+								<div class="room-filter-pagi">
+									<div class="bf-item">
+										<input type="radio" name="bathroom" id="bathroom-1" /> <label
+											for="bathroom-1">1</label>
+									</div>
+									<div class="bf-item">
+										<input type="radio" name="bathroom" id="bathroom-2" /> <label
+											for="bathroom-2">2</label>
+									</div>
+									<div class="bf-item">
+										<input type="radio" name="bathroom" id="bathroom-3" /> <label
+											for="bathroom-3">3</label>
+									</div>
+									<div class="bf-item">
+										<input type="radio" name="bathroom" id="bathroom-4" /> <label
+											for="bathroom-4">4+</label>
+									</div>
+								</div>
+							</div>
+							<div class="search-btn">
+								<button type="submit">
+									<i class="flaticon-search"></i>Search
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Filter Search Section End -->
+		<!-- Hotel Room Section Begin -->
+
+
+
+		<div class="single-property">
+			<div class="container">
+				<div class="row spad-p">
+					<div class="col-lg-12">
+						<div class="property-title">
+							<h3>#{adController.ad.kindofgood}</h3>
+						
+						</div>
+						<div class="property-price">
+							<p>Price</p>
+							<span>#{adController.ad.price}</span>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+						<div class="col-lg-12">
+						<div align="center" class="property-img owl-carousel">
+							<h:graphicImage value="../resources/#{adController.image}" />
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Single Property End -->
+		<!-- Single Property Deatails Section Begin -->
+
+		<section class="property-details">
+
+			<div class="container">
+				<div class="row sp-40 spt-40">
+					<div class="col-lg-8">
+						<div class="p-ins">
+							<div class="row details-top">
+								<div class="col-lg-12">
+									<div class="t-details">
+										<div class="popular-room-features single-property">
+											<div class="size">
+												<p>Area</p>
+												<p:graphicImage name="test/img/rooms/size.png" alt="" />
+												<span>#{adController.ad.area}</span>
+											</div>
+											<div class="beds">
+												<p>Rooms</p>
+												<p:graphicImage name="test/img/rooms/bed.png" alt="" />
+												<span>#{adController.ad.nbRooms}</span>
+											</div>
+											<div class="baths">
+												<p>Baths</p>
+												<p:graphicImage name="test/img/rooms/bath.png" alt="" />
+												<span>#{adController.ad.nbBaths}</span>
+											</div>
+											<div class="garage">
+												<p>Garage</p>
+												<p:graphicImage name="test/img/rooms/garage.png" alt="" />
+												<span>#{adController.ad.nbGarage}</span>
+											</div>
+											<div class="garage">
+												<p>Like</p>
+												<p:graphicImage name="test/img/rooms/like.png" alt=""
+													width="30" height="30" />
+												<span>#{adController.ad.nbLikes}</span>
+											</div>
+											<div class="garage">
+												<p>Dislike</p>
+												<p:graphicImage name="test/img/rooms/dislike.png" alt=""
+													width="30" height="30" />
+												<span>#{ad.nbDisLikes}</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="col-lg-12">
+									<h:form>
+										<div class="property-description">
+											<h4>Description :</h4>
+										<p>#{adController.ad.description} </p> 
+	
+											<h4>Bonus :</h4>
+<h:outputLabel rendered="#{adController.furnished==true}" value="✅ Furnished" />
+<h:outputLabel rendered="#{adController.terrace==true}" value="✅Terrace" />
+<h:outputLabel rendered="#{adController.garden==true}" value="✅ Garden" />
+<h:outputLabel rendered="#{adController.swimmingPool==true}" value="✅SwimmingPool" />
+<h:outputLabel rendered="#{adController.airConditioning==true}" value="✅ AirConditioning" />
+<h:outputLabel rendered="#{adController.ascenseur==true}" value="✅ Ascenseur" />
+<h:outputLabel rendered="#{adController.heater==true}" value="✅ Heater" />
+<h:outputText rendered="#{adController.sousSol==true}" value="✅sous_sol"></h:outputText>					 	
+											<br />
+
+				<h:outputText  rendered="#{not empty adController.ad.rentperiod}" value="Rent Period:" />
+				<h:outputText  rendered="#{not empty adController.ad.rentperiod}" value="#{adController.ad.rentperiod}" style="font-weight: bold" ></h:outputText>
+													<br />
+											<h:outputText  rendered="#{not empty adController.ad.startDate}" value="startDate of Renting:" />
+													<h:outputText  rendered="#{not empty adController.ad.startDate}" value="#{adController.ad.startDate}" style="font-weight: bold" ></h:outputText>
+												<br />
+												<h:outputText  rendered="#{not empty adController.ad.endDate}" value="endDate of Renting:" />
+													<h:outputText  rendered="#{not empty adController.ad.endDate}" value="#{adController.ad.endDate}" style="font-weight: bold" ></h:outputText>
+														<br />
+														<h:outputText  rendered="#{not empty adController.ad.rentingtype}" value="renting type:" />
+													<h:outputText  rendered="#{not empty adController.ad.rentingtype}" value="#{adController.ad.rentingtype}" style="font-weight: bold" ></h:outputText>
+										
+								
+<br></br>
+								
+						<h4>Comments :</h4>	
+						<ui:repeat var="comment" 
+								value="#{adController.listCommentaire(adController.ad)}">
+												
+												
+		
+
+								<h4>#{comment.client.firstName} : #{comment.descriptionComment}
+								</h4>
+
+						</ui:repeat>
+				
+
+
+											<br></br>
+											<br></br>
+											<h4>Rating :</h4>
+											<p:rating value="#{adController.ad.rating}" stars="5"
+												cancel="false" />
+											
+</div>
+
+				
+				</h:form>					
+
+
+									<div class="location-map">
+										<h4>#{adController.ad.location}</h4>
+
+										<div class="map">
+											<iframe
+												src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107002.020096289!2d-96.80666618302782!3d33.06138629992991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c21da13c59513%3A0x62aa036489cd602b!2sPlano%2C+TX%2C+USA!5e0!3m2!1sen!2sbd!4v1558246953339!5m2!1sen!2sbd"></iframe>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="col-lg-4">
+						<div class="row pb-30">
+							<div class="col-lg-12">
+								<div class="contact-service">
+										<h:graphicImage
+									value="../resources/images/#{UserRestController.user.picture}"
+									styleClass="bord" />
+									<h5>Posted By</h5>
+									<table>
+										<tr>
+											<td>User name : <span>#{adController.ad.user.firstName}</span></td>
+										</tr>
+										<tr>
+										
+											<td>Email : <span>#{adController.ad.user.email}</span></td>
+										</tr>
+									</table>
+									<a href="../oumayma/addAppointment.jsf" class="site-btn list-btn">Make your appointment
+										to buy</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer Section Begin -->
+		<footer class="footer-section">
+			<!-- Rooms Pic Section Begin-->
+			<div class="room-pic">
+				<div class="container-fluid">
+					<div class="row sp-40">
+						<p:graphicImage name="/test/img/room-pic/1.jpg" alt="" />
+						<p:graphicImage name="test/img/room-pic/2.jpg" alt="" />
+						<p:graphicImage name="test/img/room-pic/3.jpg" alt="" />
+						<p:graphicImage name="test/img/room-pic/4.jpg" alt="" />
+						<p:graphicImage name="test/img/room-pic/5.jpg" alt="" />
+					</div>
+				</div>
+			</div>
+			<!-- Rooms Pic Section End -->
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center sp-60">
+						<p:graphicImage name="test/img/only-logo.png" alt="" />
+					</div>
+				</div>
+				<div class="row p-37">
+					<div class="col-lg-4">
+						<div class="about-footer">
+							<h5>About Homes</h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+								Donec eleifend tristique venenatis. Maecenas a rutrum tellus nam
+								vel semper nibh.</p>
+							<div class="footer-social">
+								<a href="#"><i class="fa fa-pinterest"></i></a> <a href="#"><i
+									class="fa fa-facebook"></i></a> <a href="#"><i
+									class="fa fa-twitter"></i></a> <a href="#"><i
+									class="fa fa-dribbble"></i></a> <a href="#"><i
+									class="fa fa-behance"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<div class="footer-blog">
+							<h5>Latest Blog Posts</h5>
+
+							<div class="single-blog">
+								<div class="lt-side">
+									<p:graphicImage name="img/footer-blog-1.jpg" alt="" />
+								</div>
+								<div class="rt-side">
+									<h6>
+										How to find the perfect area for<br /> your next house.
+									</h6>
+									<div class="blog-time">
+										<i class="flaticon-clock"></i> <span>5 min</span>
+									</div>
+									<a href="#" class="read-more"> <i
+										class="flaticon-right-arrow-1"></i> <span>Read More</span>
+									</a>
+								</div>
+							</div>
+							<div class="single-blog">
+								<div class="lt-side">
+									<p:graphicImage name="img/footer-blog-2.jpg" alt="" />
+								</div>
+								<div class="rt-side">
+									<h6>
+										How to find the perfect area for<br /> your next house.
+									</h6>
+									<div class="blog-time">
+										<i class="flaticon-clock"></i> <span>5 min</span>
+									</div>
+									<a href="#" class="read-more"> <i
+										class="flaticon-right-arrow-1"></i> <span>Read More</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<div class="footer-address">
+							<h5>Get In Touch</h5>
+							<ul>
+								<li><i class="flaticon-placeholder"></i><span>132
+										Liberty Streetelit, Plano, Texas</span></li>
+								<li><i class="flaticon-envelope"></i><span>hello@home.com</span></li>
+								<li><i class="flaticon-smartphone"></i><span>214-805-4428</span></li>
+							</ul>
+							<p>Monday – Friday: 9 am – 5 pm</p>
+							<p>Saturday: 9 am – 1pm</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="row p-20">
+					<div class="col-lg-12 text-center">
+						<div class="copyright">
+							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							<script>
+								document.write(new Date().getFullYear());
+							</script>
+							All rights reserved | This template is made with <i
+								class="fa fa-heart-o" aria-hidden="true"></i> by <a
+								href="https://colorlib.com" target="_blank">Colorlib</a>
+							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- Footer Section End -->
+
+		<!-- Js Plugins -->
+		<script src="../test/js/jquery-3.3.1.min.js"></script>
+		<script src="../test/js/bootstrap.min.js"></script>
+		<script src="../test/js/jquery.nice-select.min.js"></script>
+		<script src="../test/js/owl.carousel.min.js"></script>
+		<script src="../test/js/jquery-ui.min.js"></script>
+		<script src="../test/js/jquery.slicknav.js"></script>
+		<script src="../test/js/main.js"></script>
+
+
+
+
+
+
+	</h:body>
+
+
+</ui:composition>
+

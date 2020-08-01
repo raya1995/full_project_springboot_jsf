@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	>
+
+
+	<ui:define name="menu">
+		<link rel="stylesheet" type="text/css" href="resources/css/log.css"
+			media="screen" />
+
+
+		<form action="/SpringMVC/upload" method="post"
+			enctype="multipart/form-data">
+
+
+			<div class="login-wrap">
+				<div class="login-html">
+					<input id="tab-1" type="radio" name="tab" class="sign-in"><label
+						for="tab-1" class="tab">Sign In</label></input> <input id="tab-2"
+						type="radio" name="tab" class="sign-up"><label for="tab-2"
+						class="tab">Sign Up</label></input>
+					<div class="login-form">
+
+						<div th:if="${msg}" class="group">
+							<span th:text="${msg}"></span>
+						</div>
+						<div class="group">
+							<input class="button" type="submit" value="Upload"></input>
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+		</form>
+
+
+
+
+
+	</ui:define>
+</ui:composition>

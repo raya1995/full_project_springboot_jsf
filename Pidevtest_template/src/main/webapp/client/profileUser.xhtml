@@ -1,0 +1,193 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+	<link rel='stylesheet'
+		href='https://fonts.googleapis.com/css?family=Roboto' />
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+	<style>
+html, form, h1, h2, h3, h4, h5, h6 {
+	font-family: "Roboto", sans-serif
+}
+</style>
+</h:head>
+
+
+
+<h:form class="w3-light-grey">
+	<div class="w3-content w3-margin-top" style="max-width: 1400px;">
+
+		<!-- The Grid -->
+		<div class="w3-row-padding">
+
+			<!-- Left Column -->
+			<div class="w3-third">
+
+				<div class="w3-white w3-text-grey w3-card-4">
+					<div class="w3-display-container">
+						<h:graphicImage
+							value="../resources/images/#{UserRestController.inviteClient.picture}"
+							style="width:100%" alt="Avatar" />
+						<div class="w3-display-bottomleft w3-container w3-text-black">
+							<h:outputText style=" color:#7FFFD4"
+								value="#{UserRestController.inviteClient.email}" Style="" />
+						</div>
+					</div>
+					<div class="w3-container">
+
+						<p>
+							<i
+								class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>
+							<h:outputText value="his rate " />
+							<p:rating
+								value="#{UserRestController.getmoyenvalue(UserRestController.inviteClient.id)}"
+								readonly="true" />
+						</p>
+						<h:commandButton
+							value="#{FollowRestController.value(UserRestController.inviteClient.id)}"
+							action="#{FollowRestController.Follow(UserRestController.inviteClient.id)}" />
+						<p>
+							<i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>
+							<h:outputText
+								value="you have  #{FollowRestController.nbrefollow}   follwer" />
+						</p>
+						<p>
+							<i
+								class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>
+							<h:outputText
+								value="you have  #{FollowRestController.nbrefollowing}  follwing" />
+						</p>
+						<p>
+							<i
+								class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>
+							<h:outputText
+								value="you have  #{AdRestController.nbrannonceuser}  annonces" />
+						</p>
+						<br />
+
+						<p class="w3-large">
+							<b><i
+								class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Options</b>
+						</p>
+						<h:panelGrid columns="2" cellpadding="5">
+							<p>Rated</p>
+							<div>
+
+								<p:rating value="#{RaitingUserRestController.nbretoile}">
+									<p:ajax event="rate"
+										listener="#{RaitingUserRestController.onrate}"
+										update="messages" />
+									<p:ajax event="cancel"
+										listener="#{RaitingUserRestController.oncancel}"
+										update="messages" />
+								</p:rating>
+
+							</div>
+						</h:panelGrid>
+						<h:link outcome="/pages/client/MufollowerInvite" value="MyFollower" />
+						<br />
+
+					
+
+						
+						<h:link outcome="/pages/client/followinginvite" value="following" />
+						
+						
+						<br />
+						<h:link outcome="/pages/client/sendReclamation"
+							value="send Reclamation" />
+						<p class="w3-large w3-text-theme"></p>
+
+						<br />
+					</div>
+				</div>
+				<br />
+
+				<!-- End Left Column -->
+			</div>
+
+			<!-- Right Column -->
+			<div class="w3-twothird">
+				<ui:repeat value="#{AdRestController.userannonces}" var="employe">
+					<div class="w3-container w3-card w3-white w3-margin-bottom">
+						<h:graphicImage class="room-img set-bg"  style="width: 100%"
+							value="../../resources/img/rooms/#{employe.image}" />
+
+					</div>
+				</ui:repeat>
+
+				
+
+				<!-- End Right Column -->
+			</div>
+
+			<!-- End Grid -->
+		</div>
+
+		<!-- End Page Container -->
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<p:growl id="messages" showDetail="true" />
+
+
+
+
+
+	<p:dialog header="Values" widgetVar="dlg" showEffect="5"
+		hideEffect="fade">
+		<h:panelGrid id="display" columns="2" cellpadding="5">
+			<h:outputText value="Rating 1:" />
+			<h:outputText value="#{RaitingUserRestController.nbretoile}" />
+		</h:panelGrid>
+	</p:dialog>
+
+
+</h:form>
+
+
+</html>

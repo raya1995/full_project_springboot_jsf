@@ -1,0 +1,171 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" xmlns:p1="http://primefaces.org/ui"
+	template="/template/template.xhtml">
+	<!-- BEGIN : TP1 JSF Introduction Login -->
+	<ui:param name="page_name" value="Accueil" />
+	<ui:define name="content">
+
+		<h:panelGroup columns="2">
+
+			<h:form>
+				<h:column>
+					<h:dataTable value="#{adController.ads}" var="ad" border="1">
+						<h:column>
+							<p:galleria value="#{imagesView.images}" var="image"
+								panelWidth="500" panelHeight="313" showCaption="true">
+								<p:graphicImage name="demo/images/nature/#{image}"
+									alt="Image Description for #{image}" title="#{image}" />
+							</p:galleria>
+						</h:column>
+
+
+						<h:column>
+							<f:facet name="header">
+								<h:outputText value="Description" />
+							</f:facet>
+							<h:outputText value="#{ad.price}" />
+							<br />
+								</h:column>
+								<h:column>
+								<p:commandButton value="show comments" type="button"
+									onclick="PF('dlg3').show();" />
+							
+							<p:dialog header="Comments" widgetVar="dlg3" showEffect="explode"
+								hideEffect="bounce" height="100">
+								<h:outputText
+									value="#{adController.getAllCommentsByAd(ad.idAd)}" />
+							</p:dialog>
+						</h:column>
+						
+						<h:column>
+							<f:facet name="header">
+								<h:outputText value="Comment" />
+							</f:facet>
+							<h:outputText value="#{adController.getAllCommentsByAd(ad.idAd)}" />
+						</h:column>
+
+
+						<h:column>
+							<f:facet name="header">
+								<h:outputText value="KindOfGood" />
+							</f:facet>
+							<h:outputText value="#{ad.kindofgood}" />
+						</h:column>
+
+						<h:column>
+							<f:facet name="header">
+								<h:outputText value="Location" />
+							</f:facet>
+							<h:outputText value="#{ad.location}" />
+						</h:column>
+
+						<h:column>
+							<f:facet name="header">
+								<h:outputText value="AdDate" />
+							</f:facet>
+							<h:outputText value="#{ad.adDate}" />
+						</h:column>
+
+						<!-- <h:column>
+					<f:facet name="header">
+						<h:outputText value="ViewsNumber" />
+					</f:facet>
+					<h:outputText value="#{ad.viewsNumber}" />
+				</h:column> -->
+						<!-- 	<h:column>
+					<f:facet name="header">
+						<h:outputText value="Score" />
+					</f:facet>
+					<h:outputText value="#{ad.score}" />
+				</h:column> -->
+
+
+
+						<h:column>
+							<f:facet name="header">
+								<h:outputText value="Action" />
+							</f:facet>
+							<h:commandButton value="delete"
+								action="#{adController.removeAd(ad.idAd)}" />
+
+							<h:commandButton value="modify"
+								action="#{adController.displayAd(ad)}" />
+
+
+							<h:panelGrid columns="2" cellpadding="5">
+								<h:outputText value="Views Number : " />
+								<h:outputText id="output" value="#{ad.viewsNumber}" />
+							</h:panelGrid>
+							<p:commandButton value="show"
+								action="#{adController.incrementad(ad.idAd)}" update="display"
+								oncomplete="PF('dlg').show()" />
+
+
+							<p:dialog header="Values" widgetVar="dlg" showEffect="fade"
+								hideEffect="fade">
+								<h:panelGrid id="display" columns="2" cellpadding="5">
+									<h:outputText value="Price:" />
+									<h:outputText value="#{ad.price}" />
+									<h:outputText value="Date:" />
+									<h:outputText value="#{ad.adDate}" />
+									<h:outputText value="Description:" />
+									<h:outputText value="#{ad.description}" />
+									<h:outputText value="location:" />
+									<h:outputText value="#{ad.location}" />
+									<h:outputText value="Area:" />
+									<h:outputText value="#{ad.area}" />
+									<h:outputText value="Views Number:" />
+									<h:outputText value="#{ad.viewsNumber}" />
+
+
+								</h:panelGrid>
+							</p:dialog>
+						</h:column>
+
+
+
+						<h:column>
+							<f:facet name="header">
+								<h:outputText value="Rate" />
+							</f:facet>
+							<p:growl id="messages" showDetail="true" />
+
+							<h:panelGrid columns="1" cellpadding="5">
+
+
+								<h:outputText value="Make your Rate:" />
+								<p:rating value="#{ratingView.rating3}">
+									<p:ajax event="rate" listener="#{ratingView.onrate}"
+										update="messages" />
+									<p:ajax event="cancel" listener="#{ratingView.oncancel}"
+										update="messages" />
+
+								</p:rating>
+							</h:panelGrid>
+						</h:column>
+					</h:dataTable>
+
+<h:commandButton value="filter"
+								action="#{adController.filter1()}" />
+
+
+					<p:growl id="messages" showDetail="true" />
+
+					<h:panelGrid columns="1" cellpadding="5">
+
+
+						<h:outputText value="Callback:" />
+						<p:rating value="#{ratingView.getRating8(ad.idAd)}" stars="10"
+							cancel="false" onRate="alert('You rated ' + value)" />
+
+
+
+					</h:panelGrid>
+				</h:column>
+			</h:form>
+		</h:panelGroup>
+	</ui:define>
+</ui:composition>

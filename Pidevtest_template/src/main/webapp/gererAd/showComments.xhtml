@@ -1,0 +1,38 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" xmlns:p1="http://primefaces.org/ui"
+	template="/template/template.xhtml">
+	<!-- BEGIN : TP1 JSF Introduction Login -->
+	<ui:param name="page_name" value="Accueil" />
+	<ui:define name="content">
+
+		<h:panelGroup columns="2">
+			<h:form>
+	<center>		
+<table>
+
+<h:graphicImage value="./image#{adController.image}.jpg" />
+<tr><td><h:outputText value="KindOfGood:"></h:outputText></td> <td>
+<h:outputText value="#{adController.kindofgood}">  </h:outputText></td> </tr>
+<tr><td><h:outputText value="Location:"></h:outputText></td>
+<td><h:outputText value="#{adController.location}"></h:outputText></td></tr>
+<tr><td><h:outputText value="Area:"></h:outputText></td>
+<td><h:outputText value="#{adController.area}"></h:outputText></td></tr>
+<tr><td><h:outputText value="Description of your house:"></h:outputText></td>
+ <td>  <h:outputText value="#{adController.description}" style="font-size:35px;"></h:outputText> </td></tr>
+ <tr><td><h:outputText value="Price:"></h:outputText></td>
+<td><h:outputText value="#{adController.price}"></h:outputText></td></tr>
+<tr><td><h:outputText value="#{adController.com}"></h:outputText></td></tr>
+ <tr><td><h:outputText value="Ajouter Comment :"></h:outputText></td>
+ 
+  <td>  <h:inputText value="#{adController.com.descriptionComment}" style="font-size:35px;"></h:inputText> </td></tr>
+
+        
+     
+<tr><td><p:commandButton value="Ajouter"  action="#{adController.addComment1(com)}" />
+ </td></tr>
+</table>
+</center>
+</h:form></h:panelGroup></ui:define></ui:composition>

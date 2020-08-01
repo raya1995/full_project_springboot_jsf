@@ -1,0 +1,298 @@
+<!-- 
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/template/template.xhtml">
+	<ui:param name="page_name" value="Accueil" />
+	<ui:define name="content">
+	
+		<h:panelGroup>
+			<b>Interface blockage</b>
+
+			<h:form>
+				<h:graphicImage
+					value="../../resources/images/#{UserRestController.client.picture}"
+					styleClass="bord" width="300px" height="300px"
+					align-content="center" />
+				<h:commandLink value="|Déconnexion" />
+			</h:form>
+			<br />
+
+			<b>sombody want to hack you accompte and he try many time for
+				security problem we block your accompte</b>
+			<br />
+			<b>if you want to send new a new password pleaz click on this
+				button</b>
+			<br />
+			<b> or you can try this methode and answer the question bellows</b>
+
+
+
+			<br />
+			<br />
+		</h:panelGroup>
+
+		<h:dataTable value="#{BlockRestController.users}" var="employe"
+			border="1">
+			<p:selectManyCheckbox id="basic"
+				value="#{checkboxView.selectedConsoles}">
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Picture" />
+					</f:facet>
+					<h:graphicImage value="../../resources/images/#{employe.picture}"
+						styleClass="bord" width="30px" height="30px" />
+				</h:column>
+
+
+
+
+				<h:column>
+					<f:facet name="header">
+						<h:outputText value="Last name" />
+					</f:facet>
+					<h:outputText value="#{employe.id}" />
+					 <f:selectItem itemLabel="" itemValue="#{employe.id}" />
+				</h:column>
+
+			</p:selectManyCheckbox>
+
+
+
+
+
+
+
+
+
+
+		</h:dataTable>
+
+
+
+
+
+
+
+
+		<h:link outcome="/pages/admin/welcome" value="Page d'acceuil" />
+		<br />
+	</ui:define>
+</ui:composition> -->
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	template="/template/template.xhtml">
+
+<h:head>
+	<style type="text/css">
+.ui-chart {
+	margin-bottom: 50px;
+}
+
+.ui-datalist ul {
+	padding: 0px 10px 0 20px;
+	margin: 5px 0;
+}
+
+.ui-datalist {
+	margin-bottom: 10px
+}
+
+.ui-noborder tr.ui-widget-content {
+	background: none;
+}
+
+.ui-toggleswitch {
+	vertical-align: bottom;
+}
+
+btn:after:checked {
+	background-color: red;
+}
+
+btn:before:checked {
+	background-color: red;
+}
+
+.btn.selected {
+	color: blue;
+}
+
+a {
+	padding: 5px;
+	background: green;
+}
+
+a:visited {
+	background: red;
+}
+.container {
+  
+  position: relative;
+ 
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+</style>
+	<script>
+		function myFunction() {
+			document.getElementById("demo").style.color = "red";
+		}
+	</script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+</h:head>
+
+<h:body >
+
+
+
+	<h:panelGroup>
+	
+
+
+
+		<h:graphicImage
+			value="../resources/images/#{UserRestController.client.picture}"
+			style=" display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;" />
+
+
+		<br />
+		<br />
+		<br />
+
+		<h1 Style="text-align: center;">sombody want to hack you accompte and he try many time for
+			security problem we block your accompte</h1>
+		<br />
+		<h1>if you want to send new a new password pleaz click on this
+			button 	<h:link outcome="/ForgetPassword" value="here" /></h1>
+		<br />
+		<h1> or you can try this methode and answer the question bellows</h1>
+
+
+
+		<br />
+		<br />
+	</h:panelGroup>
+
+
+
+
+
+
+
+	<h:form>
+
+
+
+
+
+
+
+
+
+
+		<h:dataTable value="#{BlockRestController.users}" var="employe"
+			>
+
+		<h:column style="background-color: #f2f2f2">
+				<f:facet name="header">
+					<h:outputText value="Picture" />
+				</f:facet>
+				<h:graphicImage value="../resources/images/#{employe.picture}"
+			/>
+			</h:column>
+
+
+
+
+			<h:column style="background-color: #f2f2f2">
+				<f:facet name="header">
+					<h:outputText value="Last name" />
+				</f:facet>
+				<h:outputText value="#{employe.email}" />
+
+			</h:column>
+
+			<h:column style="background-color: #f2f2f2">
+				<f:facet name="header">
+					<h:outputText value="check" />
+				</f:facet>
+
+
+				<h:commandButton onclick="myFunction()"
+					 class="a"
+					action="#{BlockRestController.verif(employe.id)}"
+					 />
+
+
+			</h:column>
+
+
+
+
+
+
+
+
+
+
+		</h:dataTable>
+		<br/>
+		<br/>
+		<br/>
+		<div class="container">
+  <div class="center">
+		<h:commandButton id="btn" value="end" class="btn"
+			action="#{BlockRestController.endverif()}" />
+			 </div>
+</div>
+
+
+	</h:form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</h:body>
+</html>

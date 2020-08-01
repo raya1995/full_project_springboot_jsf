@@ -1,0 +1,74 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" xmlns:p1="http://primefaces.org/ui">
+	<h:head>
+		<h:outputStylesheet library="test" name="css/bootstrap.min.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/font-awesome.min.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/nice-select.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/owl.carousel.min.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/jquery-ui.min.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/slicknav.min.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/flaticon.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/style.css"></h:outputStylesheet>
+
+		<meta charset="UTF-8" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Bar Graph</title>
+		<link rel="stylesheet"
+			href="fonts/material-icon/css/material-design-iconic-font.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	</h:head>
+	<h:body>
+		
+		<!-- Header Section Begin -->
+		<header class="header-section">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="logo">
+							<p:graphicImage name="test/img/logo.png" alt="" />
+
+						</div>
+
+						<div id="mobile-menu-wrap"></div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- Header Section End -->
+		<!-- Hero Section Begin -->
+		<section class="hero-section set-bg about-us"
+			data-setbg="#{resource['test:img/bg.jpg']}"></section>
+		<br></br>
+		<h2 align="center">Ads DonutChart</h2>
+	
+		<p:donutChart model="#{adController.donutModel}"
+			style="width: 100%; height: 500px;" />
+			
+		<footer class="footer-section">
+
+			<div class="col-lg-12 text-center sp-60">
+				<p:graphicImage name="test/img/only-logo.png" alt="" />
+			</div>
+
+		</footer>
+		<!-- JS -->
+		<script src="/test/js/jquery-3.3.1.min.js"></script>
+		<script src="/test/js/bootstrap.min.js"></script>
+		<script src="/test/js/jquery.nice-select.min.js"></script>
+		<script src="/test/js/owl.carousel.min.js"></script>
+		<script src="/test/js/jquery-ui.min.js"></script>
+		<script src="/test/js/jquery.slicknav.js"></script>
+		<script src="/test/js/main.js"></script>
+		<script src="/login/vendor/jquery/jquery.min.js"></script>
+
+		<script src="/login/js/main.js"></script>
+	</h:body>
+</ui:composition>

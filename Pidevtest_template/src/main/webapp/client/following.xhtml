@@ -1,0 +1,147 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	template="/template/template.xhtml">
+	<ui:param name="page_name" value="Accueil" />
+	
+	<ui:define name="content">
+		<!--BEGIN : TP1 JSF Introduction Login -->
+		<!--  	<h:panelGroup columns="2">
+			<h:form>
+				<h:dataTable value="#{FollowRestController.following}" var="employe"
+					border="1">
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Picture" />
+						</f:facet>
+						<h:graphicImage value="../../resources/images/#{employe.picture}"
+							width="200" height="200" />
+					</h:column>
+
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Login (Email)" />
+						</f:facet>
+						<h:outputText value="#{employe.email}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="first name" />
+						</f:facet>
+						<h:outputText value="#{employe.firstName}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Last name" />
+						</f:facet>
+						<h:outputText value="#{employe.lastname}" />
+					</h:column>
+					<h:column>
+
+						<f:facet name="header">
+							<h:outputText value="follow " />
+						</f:facet>
+						<h:outputText
+							value="#{FollowRestController.getfollow(employe.id)}" />
+					</h:column>
+					<h:column>
+
+						<f:facet name="header">
+							<h:outputText value="following " />
+						</f:facet>
+						<h:outputText
+							value="#{FollowRestController.getfollowing(employe.id)}" />
+
+					</h:column>
+					<h:column>
+
+						<f:facet name="header">
+							<h:outputText value="publication " />
+						</f:facet>
+						<h:outputText
+							value="#{AdRestController.getNbrAd(employe.id)}" />
+
+					</h:column>
+				</h:dataTable>
+
+			</h:form>
+		</h:panelGroup>
+		-->
+
+
+
+		<section class="hotel-rooms spad">
+
+			<div class="container">
+
+				<div class="row">
+					<ui:repeat value="#{FollowRestController.following}" var="employe">
+						<div class="col-lg-4 col-md-6">
+
+							<div class="room-items">
+
+								<h:graphicImage class="room-img set-bg"
+									value="../resources/images/#{employe.picture}"
+									styleClass="bord" width="30px" height="30px" />
+								<div class="room-text">
+									<div class="room-details">
+										<div class="room-title">
+											<h:outputText value="#{employe.email}" />
+
+
+										</div>
+									</div>
+									<div class="room-features">
+										<div class="room-info">
+											<h:outputText value="#{employe.firstName}" />
+											<br />
+											<h:outputText value="#{employe.lastname}" />
+										</div>
+									</div>
+									<div class="room-price">
+
+										<p>Follow</p>
+										<h:outputText
+											value="#{FollowRestController.getfollow(employe.id)}" />
+
+									</div>
+									<div class="room-price">
+										<p>follower</p>
+										<h:outputText
+											value="#{FollowRestController.getfollowing(employe.id)}" />
+
+									</div>
+									<div class="room-price">
+
+										<p>nbr annonces</p>
+										<h:outputText value="#{AdRestController.getNbrAd(employe.id)}" />
+
+									</div>
+									<h:form>
+										<h:commandButton value="profile" class="site-btn btn-line"
+											action="#{UserRestController.afficherProfile(employe.id)}" />
+									</h:form>
+								</div>
+							</div>
+
+						</div>
+					</ui:repeat>
+
+
+
+
+				</div>
+
+			</div>
+
+		</section>
+
+
+		<h:link outcome="/pages/admin/welcome" value="Page d'acceuil" />
+		<br />
+	</ui:define>
+
+
+</ui:composition>

@@ -1,0 +1,422 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" xmlns:p1="http://primefaces.org/ui">
+
+	<h:head>
+		<!-- Required meta tags-->
+		<meta charset="UTF-8" />
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<meta name="description" content="au theme template" />
+		<meta name="author" content="Hau Nguyen" />
+		<meta name="keywords" content="au theme template" />
+
+		<title>Dashboard</title>
+
+		<!-- Fontfaces CSS-->
+
+		
+		<h:outputStylesheet library="test" name="css/style.css"></h:outputStylesheet>
+		<link href="css/font-face.css" rel="stylesheet" media="all" />
+		<link href="vendor/font-awesome-4.7/css/font-awesome.min.css"
+			rel="stylesheet" media="all" />
+		<link href="vendor/font-awesome-5/css/fontawesome-all.min.css"
+			rel="stylesheet" media="all" />
+		<link href="vendor/mdi-font/css/material-design-iconic-font.min.css"
+			rel="stylesheet" media="all" />
+
+		<link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet"
+			media="all" />
+
+		<link href="vendor/animsition/animsition.min.css" rel="stylesheet"
+			media="all" />
+		<link
+			href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css"
+			rel="stylesheet" media="all" />
+		<link href="vendor/wow/animate.css" rel="stylesheet" media="all" />
+		<link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet"
+			media="all" />
+		<link href="vendor/slick/slick.css" rel="stylesheet" media="all" />
+		<link href="vendor/select2/select2.min.css" rel="stylesheet"
+			media="all" />
+		<link href="vendor/perfect-scrollbar/perfect-scrollbar.css"
+			rel="stylesheet" media="all" />
+		<link href="vendor/vector-map/jqvmap.min.css" rel="stylesheet"
+			media="all" />
+
+		<link href="css/theme.css" rel="stylesheet" media="all" />
+
+	</h:head>
+
+
+
+	<h:body class="animsition">
+		<div class="page-wrapper">
+			<!-- MENU SIDEBAR-->
+			<aside class="menu-sidebar2">
+				<div class="logo">
+					<a href="#"> <img src="images/bg.jpg" width="220" height="350" />
+					</a>
+				</div>
+				
+			</aside>
+			<!-- END MENU SIDEBAR-->
+
+			<!-- PAGE CONTAINER-->
+			<div class="page-container2">
+				<!-- HEADER DESKTOP-->
+				<header class="header-desktop2">
+					<div class="section__content section__content--p30">
+						<div class="container-fluid">
+							<div class="header-wrap2">
+								<div class="logo d-block d-lg-none">
+									<a href="#"> <img src="images/icon/logo-white.png"
+										alt="CoolAdmin" />
+									</a>
+								</div>
+								<div class="header-button2">
+									<div class="header-button-item js-item-menu">
+										<i class="zmdi zmdi-search"></i>
+										<div class="search-dropdown js-dropdown">
+											<form action="">
+												<input class="au-input au-input--full au-input--h65"
+													type="text" placeholder="Search for datas &amp; reports..." />
+												<span class="search-dropdown__icon"> <i
+													class="zmdi zmdi-search"></i>
+												</span>
+											</form>
+										</div>
+									</div>
+									<div class="header-button-item has-noti js-item-menu">
+										<i class="zmdi zmdi-notifications"></i>
+										<div class="notifi-dropdown js-dropdown">
+											<div class="notifi__title">
+												<p>You have 3 Notifications</p>
+											</div>
+											<div class="notifi__item">
+												<div class="bg-c1 img-cir img-40">
+													<i class="zmdi zmdi-email-open"></i>
+												</div>
+												<div class="content">
+													<p>You got a email notification</p>
+													<span class="date">April 12, 2018 06:50</span>
+												</div>
+											</div>
+											<div class="notifi__item">
+												<div class="bg-c2 img-cir img-40">
+													<i class="zmdi zmdi-account-box"></i>
+												</div>
+												<div class="content">
+													<p>Your account has been blocked</p>
+													<span class="date">April 12, 2018 06:50</span>
+												</div>
+											</div>
+											<div class="notifi__item">
+												<div class="bg-c3 img-cir img-40">
+													<i class="zmdi zmdi-file-text"></i>
+												</div>
+												<div class="content">
+													<p>You got a new file</p>
+													<span class="date">April 12, 2018 06:50</span>
+												</div>
+											</div>
+											<div class="notifi__footer">
+												<a href="#">All notifications</a>
+											</div>
+										</div>
+									</div>
+									<div class="header-button-item mr-0 js-sidebar-btn">
+										<i class="zmdi zmdi-menu"></i>
+									</div>
+									<div class="setting-menu js-right-sidebar d-none d-lg-block">
+										<div class="account-dropdown__body">
+											<div class="account-dropdown__item">
+												<a href="#"> <i class="zmdi zmdi-account"></i>Account
+												</a>
+											</div>
+											<div class="account-dropdown__item">
+												<a href="#"> <i class="zmdi zmdi-settings"></i>Setting
+												</a>
+											</div>
+											<div class="account-dropdown__item">
+												<a href="#"> <i class="zmdi zmdi-money-box"></i>Billing
+												</a>
+											</div>
+										</div>
+										<div class="account-dropdown__body">
+											<div class="account-dropdown__item">
+												<a href="#"> <i class="zmdi zmdi-globe"></i>Language
+												</a>
+											</div>
+											<div class="account-dropdown__item">
+												<a href="#"> <i class="zmdi zmdi-pin"></i>Location
+												</a>
+											</div>
+											<div class="account-dropdown__item">
+												<a href="#"> <i class="zmdi zmdi-email"></i>Email
+												</a>
+											</div>
+											<div class="account-dropdown__item">
+												<a href="#"> <i class="zmdi zmdi-notifications"></i>Notifications
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</header>
+				<!-- END HEADER DESKTOP-->
+
+				<!-- BREADCRUMB-->
+				<section class="au-breadcrumb m-t-75">
+					<div class="section__content section__content--p30">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="au-breadcrumb-content">
+										<div class="au-breadcrumb-left">
+											<span class="au-breadcrumb-span">You are here:</span>
+											<ul class="list-unstyled list-inline au-breadcrumb__list">
+												<li class="list-inline-item">Dari.tn
+												</li>
+												<li class="list-inline-item seprate"><span>/</span></li>
+												<li class="list-inline-item active"><a href="../Login/dashbordvente.jsf">Dashboard</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- END BREADCRUMB-->
+
+				<section>
+					<div class="section__content section__content--p30">
+						<div class="container-fluid">
+							<div class="row">
+								<div class="col-xl-6">
+									<!-- USER DATA-->
+									<div class="user-data m-b-40">
+										<h3 class="title-3 m-b-30">
+											<i class="zmdi zmdi-account-calendar"></i> Details Vente
+										</h3>
+
+										<div class="table-responsive table-data">
+
+											<div class="single-property">
+												<div class="container">
+													<div class="row spad-p">
+														<div class="col-lg-12">
+															<div class="property-title">
+																<h3>#{adController.ad.kindofgood}</h3>
+															</div>
+															<div class="property-price">
+																<p>Price</p>
+																<span>#{adController.ad.price} Dt</span>
+															</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-lg-12">
+															<div align="center" class="property-img owl-carousel">
+																<h:graphicImage
+																	value="/upload/#{adController.ad.image}" />
+
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+
+
+											<div class="p-ins">
+												<div class="row details-top">
+													<div class="col-lg-12">
+														<div class="t-details">
+															<div class="popular-room-features single-property">
+																<div class="size">
+																	<p>Area</p>
+																	<p:graphicImage name="test/img/rooms/size.png" alt="" />
+																	<span>#{adController.ad.area}</span>
+																</div>
+																<div class="beds">
+																	<p>Rooms</p>
+																	<p:graphicImage name="test/img/rooms/bed.png" alt="" />
+																	<span>#{adController.ad.nbRooms}</span>
+																</div>
+																<div class="baths">
+																	<p>Baths</p>
+																	<p:graphicImage name="test/img/rooms/bath.png" alt="" />
+																	<span>#{adController.ad.nbBaths}</span>
+																</div>
+																<div class="garage">
+																	<p>Garage</p>
+																	<p:graphicImage name="test/img/rooms/garage.png" alt="" />
+																	<span>#{adController.ad.nbGarage}</span>
+																</div>
+																<div class="garage">
+																	<p>Like</p>
+																	<p:graphicImage name="test/img/rooms/like.png" alt=""
+																		width="30" height="30" />
+																	<span>#{adController.ad.nbLikes}</span>
+																</div>
+																<div class="garage">
+																	<p>Dislike</p>
+																	<p:graphicImage name="test/img/rooms/dislike.png"
+																		alt="" width="30" height="30" />
+																	<span>#{adController.ad.nbDisLikes}</span>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-lg-12">
+														<h:form>
+															<div class="property-description">
+																<h4>Description</h4>
+																<p>#{adController.ad.description}</p>
+
+																<ui:repeat var="comment"
+																	value="#{adController.com}">
+
+																	<h4>#{comment.client.firstName} : #{comment.descriptionComment}
+																	</h4>
+
+																</ui:repeat>
+
+
+																<h4>Rating</h4>
+																<p:rating value="#{adController.ad.rating}"
+																	stars="5" cancel="false" />
+																	
+																	
+																	
+																						<h4>Bonus :</h4>
+<h:outputLabel rendered="#{adController.furnished==true}" value="✅ Furnished" />
+<h:outputLabel rendered="#{adController.terrace==true}" value="✅Terrace" />
+<h:outputLabel rendered="#{adController.garden==true}" value="✅ Garden" />
+<h:outputLabel rendered="#{adController.swimmingPool==true}" value="✅SwimmingPool" />
+<h:outputLabel rendered="#{adController.airConditioning==true}" value="✅ AirConditioning" />
+<h:outputLabel rendered="#{adController.ascenseur==true}" value="✅ Ascenseur" />
+<h:outputLabel rendered="#{adController.heater==true}" value="✅ Heater" />
+<h:outputText rendered="#{adController.sousSol==true}" value="✅sous_sol"></h:outputText>	
+
+															</div>
+														</h:form>
+
+
+														<div class="location-map">
+															<h4>#{adController.ad.region}</h4>
+
+															<div class="map">
+																<iframe
+																	src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107002.020096289!2d-96.80666618302782!3d33.06138629992991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c21da13c59513%3A0x62aa036489cd602b!2sPlano%2C+TX%2C+USA!5e0!3m2!1sen!2sbd!4v1558246953339!5m2!1sen!2sbd"></iframe>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+
+
+										</div>
+
+									</div>
+									<!-- END USER DATA-->
+								</div>
+								<div class="col-xl-6">
+									<!-- USER DATA-->
+									<div class="user-data m-b-40">
+										<h3 class="title-3 m-b-30">
+											<i class="zmdi zmdi-account-calendar"></i>Posted By
+										</h3>
+
+										<div class="table-responsive table-data">
+											<div class="row pb-30">
+												<div class="col-lg-12">
+													<div class="contact-service">
+														<p:graphicImage name="test/img/single-property/raya.jpg"
+															alt="" />
+														<!-- <p:graphicImage name="test/img/blog/1_agent.png" alt="" /> -->
+														<table>
+															<tr>
+																<td>User name : <span>#{adController.ad.user.firstName}</span></td>
+															</tr>
+															<tr>
+																<td>Email : <span>#{adController.ad.user.email}</span></td>
+															</tr>
+														</table>
+														
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+									<!-- END USER DATA-->
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="copyright">
+									<p>Our WebSite is the best.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- END PAGE CONTAINER-->
+			</div>
+
+		</div>
+
+		<!-- Jquery JS-->
+		<script src="vendor/jquery-3.2.1.min.js"></script>
+		<!-- Bootstrap JS-->
+		<script src="vendor/bootstrap-4.1/popper.min.js"></script>
+		<script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+		<!-- Vendor JS       -->
+		<script src="vendor/slick/slick.min.js">
+			
+		</script>
+		<script src="vendor/wow/wow.min.js"></script>
+		<script src="vendor/animsition/animsition.min.js"></script>
+		<script
+			src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+			
+		</script>
+		<script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+		<script src="vendor/counter-up/jquery.counterup.min.js">
+			
+		</script>
+		<script src="vendor/circle-progress/circle-progress.min.js"></script>
+		<script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+		<script src="vendor/chartjs/Chart.bundle.min.js"></script>
+		<script src="vendor/select2/select2.min.js">
+			
+		</script>
+		<script src="vendor/vector-map/jquery.vmap.js"></script>
+		<script src="vendor/vector-map/jquery.vmap.min.js"></script>
+		<script src="vendor/vector-map/jquery.vmap.sampledata.js"></script>
+		<script src="vendor/vector-map/jquery.vmap.world.js"></script>
+
+		<!-- Main JS-->
+		<script src="js/main.js"></script>
+
+	</h:body>
+
+
+</ui:composition>

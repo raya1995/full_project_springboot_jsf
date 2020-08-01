@@ -1,0 +1,515 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+xmlns:f="http://java.sun.com/jsf/core" 
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:ui="http://java.sun.com/jsf/facelets"
+template="/template/templateSans.xhtml"
+xmlns:p="http://primefaces.org/ui">
+<ui:param name="page_name" value="Connexion" />
+<ui:define name="menu">
+ <link rel="stylesheet" href="youssef.css/core-style.css"></link>
+    <link rel="stylesheet" href="youssef.css/style.css"></link>
+    		        		        		        <link rel="stylesheet" href="title.css" />
+    
+
+	<h:head>
+		<title>Home</title>
+
+	<!-- Google Font -->
+	
+			<link
+			href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+			rel="stylesheet" />
+		
+		    <link rel="stylesheet" href="../resources/css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../resources/css/font-awesome.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../resources/css/nice-select.css" type="text/css"/>
+    <link rel="stylesheet" href="../resources/css/owl.carousel.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../resources/css/jquery-ui.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../resources/css/slicknav.min.css" type="text/css"/>
+    <link rel="stylesheet" href="../resources/css/flaticon.css" type="text/css"/>
+    <link rel="stylesheet" href="../resources/css/style.css" type="text/css"/>
+   
+   
+   
+   <!-- menu -->
+    <link rel="stylesheet" href="../resources/menu/css/bootstrap.css"/>
+    <link rel="stylesheet" href="../resources/menu/vendors/linericon/style.css"/>
+    <link rel="stylesheet" href="../resources/menu/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../resources/menu/vendors/owl-carousel/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="../resources/menu/vendors/lightbox/simpleLightbox.css"/>
+    <link rel="stylesheet" href="../resources/menu/vendors/nice-select/css/nice-select.css"/>
+    <link rel="stylesheet" href="../resources/menu/vendors/animate-css/animate.css"/>
+    <link rel="stylesheet" href="../resources/menu/vendors/flaticon/flaticon.css"/>
+    <!-- main css -->
+    <link rel="stylesheet" href="../resources/menu/css/style.css"/>
+    <link rel="stylesheet" href="../resources/menu/css/responsive.css"/>
+		
+		<h:outputStylesheet library="test" name="css/bootstrap.min.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/font-awesome.min.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/nice-select.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/owl.carousel.min.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/jquery-ui.min.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/slicknav.min.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/flaticon.css"></h:outputStylesheet>
+	    <h:outputStylesheet library="test" name="css/style.css"></h:outputStylesheet>
+
+
+	</h:head>
+
+		<!-- Page Preloder -->
+		<div id="preloder">
+			<div class="loader"></div>
+		</div>
+		<!-- Header Section Begin -->
+		 <header class="header_area">
+            <div class="top_menu">
+                <div class="container">
+                    <div class="top_inner">
+                        <div class="float-left">
+                            <a href="#">Visit Us</a>
+                            <a href="#">Online Support</a>
+                        </div>
+                        <div class="float-right">
+                            <ul class="list header_socila">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main_menu" id="mainNav">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""/><img src="img/logo-2.png" alt="" /></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                            <ul class="nav navbar-nav menu_nav ml-auto">
+                                <li class="nav-item active"><a class="nav-link" href="../client/Accueil.jsf">Home</a></li>
+                                <li class="nav-item active"><a class="nav-link" href="../client/AddAd.jsf">Post your House</a></li> 
+                                <li class="nav-item"><a class="nav-link" href="../client/AdVente.jsf">Sell</a></li> 
+                                <li class="nav-item submenu dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Rent</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item"><a class="nav-link" href="../client/AdRent.jsf">Rent</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="../client/AdHRent.jsf">Holiday Renting</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="../client/AdTRent.jsf">Temporary Renting</a></li>
+                                    </ul>
+                                </li> 
+                                <li class="nav-item submenu dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Estimate</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item"><a class="nav-link" href="../client/EstimationAccueil.jsf">Property Estimate</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="../client/EstimationAccueilLoyer.jsf">Rent Estimate</a></li>
+                                    </ul>
+                                </li> 
+                                <li class="nav-item"><a class="nav-link" href="contact.html">Credit Simulation</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contact.html">Furniture</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                                <li class="nav-item submenu dropdown">
+                                    <a href="../client/Profil.jsf" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More</a>
+                                    <ul class="dropdown-menu">
+                                     	<li class="nav-item"><a class="nav-link" href="../client/welcome.jsf">Profil</a></li>
+                                     	<li class="nav-item"><a class="nav-link" href="../client/Statistique.jsf">About Dari.tn</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="../Login/login.jsf">LogOut</a></li>
+                                    </ul>
+                                </li> 
+                                
+                            </ul>
+                        </div> 
+                    </div>
+                </nav>
+            </div>
+        </header>
+		<!-- Header Section End -->
+		<!-- Hero Section Begin -->
+		<section class="hero-section home-page set-bg"
+			data-setbg="#{resource['test:img/bg.jpg']}">
+			<div class="container hero-text text-white">
+				<h2>Find your next</h2>
+				<h2>dream home.</h2>
+			</div>
+		</section>
+		<!-- Hero Section End -->
+		<!-- Filter Search Section Begin -->
+		<div class="filter-search">
+			<div class="container ">
+				<div class="row">
+					<div class="col-lg-12">
+						<form class="filter-form">
+							<div class="location">
+								<p>Location</p>
+								<select class="filter-location">
+									<option value="">London</option>
+									<option value="">US</option>
+									<option value="">UAE</option>
+								</select>
+							</div>
+							<div class="search-type">
+								<p>Property Type</p>
+								<select class="filter-property">
+									<option value="">House</option>
+									<option value="">Resort</option>
+									<option value="">Hotel</option>
+								</select>
+							</div>
+							<div class="price-range">
+								<p>Price</p>
+								<div class="range-slider">
+									<div id="slider-range">
+										<div tabindex="0"
+											class="ui-slider-handle ui-corner-all ui-state-default slider-left">50k</div>
+										<div tabindex="0"
+											class="ui-slider-handle ui-corner-all ui-state-default slider-right">300k</div>
+									</div>
+								</div>
+							</div>
+							<div class="bedrooms">
+								<p>Bedrooms</p>
+								<div class="room-filter-pagi">
+									<div class="bf-item">
+										<input type="radio" name="room" id="room-1" /> <label
+											for="room-1">1</label>
+									</div>
+									<div class="bf-item">
+										<input type="radio" name="room" id="room-2" /> <label
+											for="room-2">2</label>
+									</div>
+									<div class="bf-item">
+										<input type="radio" name="room" id="room-3" /> <label
+											for="room-3">3</label>
+									</div>
+									<div class="bf-item">
+										<input type="radio" name="room" id="room-4" /> <label
+											for="room-4">4+</label>
+									</div>
+								</div>
+							</div>
+							<div class="bathrooms">
+								<p>Bathrooms</p>
+								<div class="room-filter-pagi">
+									<div class="bf-item">
+										<input type="radio" name="bathroom" id="bathroom-1" /> <label
+											for="bathroom-1">1</label>
+									</div>
+									<div class="bf-item">
+										<input type="radio" name="bathroom" id="bathroom-2" /> <label
+											for="bathroom-2">2</label>
+									</div>
+									<div class="bf-item">
+										<input type="radio" name="bathroom" id="bathroom-3" /> <label
+											for="bathroom-3">3</label>
+									</div>
+									<div class="bf-item">
+										<input type="radio" name="bathroom" id="bathroom-4" /> <label
+											for="bathroom-4">4+</label>
+									</div>
+								</div>
+							</div>
+							<div class="search-btn">
+								<button type="submit">
+									<i class="flaticon-search"></i>Search
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Filter Search Section End -->
+	
+
+<h:form >
+
+<h2>Here are all you appointments </h2>
+
+ <section class="hotel-rooms spad">
+
+			<div class="container">
+  				<div class="contact-form" >
+				<div class="row">
+				
+
+   
+				<section class="newslatter-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="newslatter-text">
+				
+
+ 
+
+<table>
+
+
+
+<tr><td><h:outputText value="Justification"   /></td>
+<td><h:inputText id="heure"
+ value="#{appointmentController.justification}" placeholder="why you were absent"
+  class="name" >
+  
+  
+ </h:inputText></td></tr>
+ 
+
+
+<tr><td><p:commandButton value="Update Appointment"
+action="#{appointmentController.updateAppointment()}" class="site-btn c-btn" >
+    </p:commandButton></td>
+    <td><p:commandButton value="Clean"
+action="#{appointmentController.cleanApp()}" class="site-btn c-btn" >
+    </p:commandButton></td>
+     <td><p:commandButton value="Back"
+action="#{appointmentController.add()}" class="site-btn c-btn" >
+    </p:commandButton></td></tr>
+    
+    <style>
+
+* {box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color:#FFFF00;
+  color: black;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+  animation: text-shadow 1.5s ease-in-out infinite;
+  
+}
+
+
+
+
+
+
+
+</style>
+    <tr><td><h:commandButton class="open-button" action="#{appointmentController.likes}" value="Did you like this Appointment Click Here Now"/>
+
+</td></tr>
+    
+   
+   </table>
+
+</div></div></div></div></section>
+    
+   
+       
+ <div class="row">
+<div class="col-lg-12">
+    <div class="box dark">
+        <header>
+            <div class="icons"><i class="icon-th-large"></i></div>
+            <h4>Appointments sent</h4></header>
+
+                
+
+
+
+
+<h:dataTable  class="table table-responsive" id="myTable" value="#{appointmentController.appointments}" var="appointment" border="1"
+ filteredValue="#{appointment.filteredAppointmentList}"
+             widgetVar="appointmentWidget" emptyMessage="No cars found with given criteria">
+            
+<h:column filterBy="#{appointment.dateAppointment}" filterMatchMode="contains"><f:facet name="filter"><h:outputText value="dateAppointment" /></f:facet>
+<h:outputText value="#{appointment.dateAppointement}" /></h:column>
+<h:column filterBy="#{appointment.heure}" filterMatchMode="contains"><f:facet name="filter"><h:outputText value="Hour" /></f:facet>
+<h:outputText value="#{appointment.heure}" /></h:column>
+<h:column filterBy="#{appointment.visibility== true ? 'Oui' : 'Non'}" filterMatchMode="contains"><f:facet name="header"><h:outputText value="visibility" /></f:facet>
+<h:outputText value="#{appointment.visibility== true ? 'Oui' : 'Non'}" /></h:column>
+<h:column filterBy="#{appointment.state}" filterMatchMode="contains"><f:facet name="filter"><h:outputText value="state" /></f:facet>
+<h:outputText value="#{appointment.state}" /></h:column>
+<h:column filterBy="#{appointment.purchased== true ? 'Oui' : 'Non'}" filterMatchMode="contains"><f:facet name="header"><h:outputText value="purchased" /></f:facet>
+<h:outputText value="#{appointment.purchased== true ? 'Oui' : 'Non'}" /></h:column>
+<h:column filterBy="#{appointment.attendance}" filterMatchMode="contains"><f:facet name="filter"><h:outputText value="attendance" /></f:facet>
+<h:outputText value="#{appointment.attendance}" /></h:column>
+<h:column filterBy="#{appointment.justification}" filterMatchMode="contains"><f:facet name="header"><h:outputText value="justification" /></f:facet>
+<h:outputText value="#{appointment.justification}" /></h:column>
+<h:column filterBy="#{appointment.datePurchasing}" filterMatchMode="contains"><f:facet name="filter"><h:outputText value="datePurchasing" /></f:facet>
+<h:outputText value="#{appointment.datePurchasing}" /></h:column>
+<h:column filterBy="#{appointment.filepage}" filterMatchMode="contains"><f:facet name="filter"><h:outputText value="Files" /></f:facet>
+<h:outputText value="#{appointment.files}" /><h:commandButton action="#{appointmentController.filePage}" value="Show" class="site-btn c-btn" /></h:column>
+
+<h:column>
+<f:facet name="header"><h:outputText value="Action" /></f:facet>
+<h:commandButton action="#{appointmentController.removeAppointment(appointment.idAppointement)}"
+value="Delete" class="site-btn c-btn" />
+<h:commandButton action="#{appointmentController.displayAppointment(appointment)}"
+value="Afficher" class="site-btn c-btn" />
+</h:column>
+
+</h:dataTable></div></div></div>
+
+
+<div class="row">
+<div class="col-lg-12">
+    <div class="box dark">
+        <header>
+            <div class="icons"><i class="icon-th-large"></i></div>
+            <h4>Appointments of the day</h4></header>
+
+                
+
+
+
+<h:dataTable class="table table-responsive" value="#{appointmentController.appointmentToDay}" var="appointements" border="1">
+<h:column><f:facet name="header"><h:outputText value="dateAppointment" /></f:facet>
+<h:outputText value="#{appointements.dateAppointement}" /></h:column>
+<h:column><f:facet name="header"><h:outputText value="Hour" /></f:facet>
+<h:outputText value="#{appointements.heure}" /></h:column>
+<h:column><f:facet name="header"><h:outputText value="visibility" /></f:facet>
+<h:outputText value="#{appointements.visibility== true ? 'Oui' : 'Non'}" /></h:column>
+<h:column><f:facet name="header"><h:outputText value="state" /></f:facet>
+<h:outputText value="#{appointements.state}" /></h:column>
+<h:column><f:facet name="header"><h:outputText value="purchased" /></f:facet>
+<h:outputText value="#{appointements.purchased== true ? 'Oui' : 'Non'}" /></h:column>
+<h:column><f:facet name="header"><h:outputText value="attendance" /></f:facet>
+<h:outputText value="#{appointements.attendance}" /></h:column>
+<h:column><f:facet name="header"><h:outputText value="justification" /></f:facet>
+<h:outputText value="#{appointements.justification}" /></h:column>
+<h:column><f:facet name="header"><h:outputText value="datePurchasing" /></f:facet>
+<h:outputText value="#{appointements.datePurchasing}" /></h:column>
+<h:column><f:facet name="header"><h:outputText value="Files" /></f:facet>  
+<h:outputText value="#{appointment.files}" />
+</h:column>
+
+
+</h:dataTable></div></div></div>
+
+		<!-- Footer Section Begin -->
+		<footer class="footer-section">
+			<!-- Rooms Pic Section Begin-->
+			<div class="room-pic">
+				<div class="container-fluid">
+					<div class="row sp-40">
+						<img src="test/img/room-pic/1.jpg" alt="" /> <img
+							src="test/img/room-pic/2.jpg" alt="" /> <img
+							src="test/img/room-pic/3.jpg" alt="" /> <img
+							src="test/img/room-pic/4.jpg" alt="" /> <img
+							src="test/img/room-pic/5.jpg" alt="" />
+					</div>
+				</div>
+			</div>
+			<!-- Rooms Pic Section End -->
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center sp-60">
+						<img src="img/only-logo.png" alt="" />
+					</div>
+				</div>
+				 <div class="row p-37">
+                <div class="col-lg-4">
+                    <div class="about-footer">
+                        <h5>About Homes</h5>
+                        <p>Our application will allow the user to buy or sell, 
+                        rent or estimate his property and many other features around real estate.</p>
+                   
+                    </div>
+                </div>
+					 <div class="col-lg-4 col-md-6">
+                    <div class="footer-blog">
+                        <h5>Latest Blog Posts</h5>
+
+                        <div class="single-blog">
+                            <div class="lt-side">
+                             <p:graphicImage name="test/img/footer-blog-1.jpg" alt="" />
+                            
+                            </div>
+								 <div class="rt-side">
+                                <h6>How to find the perfect area for<br /> your next house.</h6>
+                                <div class="blog-time">
+                                    <i class="flaticon-clock"></i>
+                                    <span>5 min</span>
+                                </div>
+                                <a href="#" class="read-more">
+                                    <i class="flaticon-right-arrow-1"></i>
+                                    <span>Read More</span>
+                                </a>
+                            </div>
+                        </div>
+							 <div class="single-blog">
+                            <div class="lt-side">
+                             <p:graphicImage name="test/img/footer-blog-2.jpg" alt="" />
+                            </div>
+                            <div class="rt-side">
+                                <h6>How to find the perfect area for<br /> your next house.</h6>
+                                <div class="blog-time">
+                                    <i class="flaticon-clock"></i>
+                                    <span>5 min</span>
+                                </div>
+                                <a href="#" class="read-more">
+                                    <i class="flaticon-right-arrow-1"></i>
+                                    <span>Read More</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+					 <div class="col-lg-4 col-md-6">
+                    <div class="footer-address">
+                        <h5>Get In Touch</h5>
+                        <ul>
+                            <li><span>132 Liberty Streetelit, Plano, Tunisia</span>
+                            </li>
+                            <li><span>Dari@home.com</span></li>
+                            <li><span>214-805-4428</span></li>
+                        </ul>
+                        <p>This application By   Raya Hadhri Loua Ben khaddouma Majdi Chaouat Oumayma Homrani Oussama Boubaker Youssef Gharsallah
+                        </p>
+                        <p>4 InfoB 2</p>
+                    </div>
+                </div>
+            </div>
+
+				<div class="row p-20">
+					<div class="col-lg-12 text-center">
+						<div class="copyright">
+							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							<script>
+								document.write(new Date().getFullYear());
+							</script>
+							All rights reserved | This template is made with <i
+								class="fa fa-heart-o" aria-hidden="true"></i> by <a
+								href="https://colorlib.com" target="_blank">Colorlib</a>
+							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- Footer Section End -->
+
+
+
+<!-- Js Plugins -->
+		<!-- Js Plugins -->
+		<script src="../test/js/jquery-3.3.1.min.js"></script>
+		<script src="../test/js/bootstrap.min.js"></script>
+		<script src="../test/js/jquery.nice-select.min.js"></script>
+		<script src="../test/js/owl.carousel.min.js"></script>
+		<script src="../test/js/jquery-ui.min.js"></script>
+		<script src="../test/js/jquery.slicknav.js"></script>
+		<script src="../test/js/main.js"></script>
+
+
+</div></div></div></section>
+
+</h:form></ui:define></ui:composition>

@@ -1,0 +1,146 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" xmlns:p1="http://primefaces.org/ui">
+	<h:head>
+		<h:outputStylesheet library="test" name="css/bootstrap.min.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/font-awesome.min.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/nice-select.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/owl.carousel.min.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/jquery-ui.min.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/slicknav.min.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/flaticon.css"></h:outputStylesheet>
+		<h:outputStylesheet library="test" name="css/style.css"></h:outputStylesheet>
+		<meta charset="UTF-8" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+		<title>Sign Up Form by</title>
+		<!-- Font Icon -->
+		<link rel="stylesheet"
+			href="fonts/material-icon/css/material-design-iconic-font.min.css" />
+		<!-- Main css -->
+		<link rel="stylesheet" href="css/style.css" />
+	</h:head>
+	<body>
+		<div id="preloder">
+			<div class="loader"></div>
+		</div>
+		<!-- Header Section Begin -->
+		<header class="header-section">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="logo">
+							<a href="./index.html"> <p:graphicImage
+									name="test/img/logo.png" alt="" />
+							</a>
+						</div>
+
+						<div id="mobile-menu-wrap"></div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- Header Section End -->
+		<!-- Hero Section Begin -->
+		<section class="hero-section set-bg about-us"
+			data-setbg="#{resource['test:img/bg.jpg']}"></section>
+		<div class="main">
+			<!-- Sing in  Form -->
+			<section class="sign-in">
+
+				<div class="container">
+
+					<div class="signin-content">
+
+						<div class="signin-image">
+							<figure>
+								<img src="images/bg.jpg" alt="sing up image" />
+							</figure>
+							<a href="signup.jsf" class="signup-image-link">Create an
+								account</a>
+						</div>
+
+						<div class="signin-form">
+
+							<h2 class="form-title">Sign up</h2>
+							<form method="post" class="register-form" id="login-form">
+
+								<div class="form-group">
+									<h5>
+										<i><img src="images/personne.png" alt="sing up image"
+											width="15px" height="15px" /></i> Your Name :
+									</h5>
+									<h:inputText type="text" name="name" 
+										placeholder="Your Name" value="#{UserRestController.email}"/>
+								</div>
+
+								<div class="form-group">
+									<h5>
+										<i><img src="images/password.png" alt="sing up image"
+											width="15px" height="15px" /></i> You Password :
+									</h5>
+									<h:inputText type="password" name="pass" 
+										placeholder="Password" value="#{UserRestController.password}"/>
+								</div>
+
+								<div class="form-group">
+									<input type="checkbox" name="remember-me" id="remember-me"
+										class="agree-term" /> <label for="remember-me"
+										class="label-agree-term"><span></span>Remember me</label>
+								</div>
+
+								<div class="form-group form-button">
+								<p:commandButton class="form-submit" value="Log in" 
+										 action="#{UserRestController.doLogin()}" />
+									
+								</div>
+							</form>
+
+							<div class="social-login">
+								<span class="social-label">Or login with</span>
+
+								<ul class="socials">
+
+									<li><a href="#"><i
+											class="display-flex-center zmdi zmdi-facebook"></i></a></li>
+
+									<li><a href="#"><i
+											class="display-flex-center zmdi zmdi-twitter"></i></a></li>
+
+									<li><a href="#"><i
+											class="display-flex-center zmdi zmdi-google"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<footer class="footer-section">
+
+			<div class="col-lg-12 text-center sp-60">
+				<p:graphicImage name="test/img/only-logo.png" alt="" />
+			</div>
+
+		</footer>
+		<!-- JS -->
+
+		<script src="/test/js/jquery-3.3.1.min.js"></script>
+		<script src="/test/js/bootstrap.min.js"></script>
+		<script src="/test/js/jquery.nice-select.min.js"></script>
+		<script src="/test/js/owl.carousel.min.js"></script>
+		<script src="/test/js/jquery-ui.min.js"></script>
+		<script src="/test/js/jquery.slicknav.js"></script>
+		<script src="/test/js/main.js"></script>
+		<script src="/login/vendor/jquery/jquery.min.js"></script>
+
+		<script src="/login/js/main.js"></script>
+	</body>
+	<!-- This templates was made by Colorlib (https://colorlib.com) -->
+</ui:composition>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<meta charset="UTF-8"></meta>
+<title>Upload photo</title>
+</head>
+<body background="file.jpg"
+	style=" background-repeat: no-repeat;">   <form action="/upload" method="post" enctype="multipart/form-data">
+	<h1>Please attach your CIN</h1>
+      <input type="file" name="files" multiple="multiple"></input>
+      <input type="submit" value="Upload CIN"></input>
+<a href="/SpringMVC/add">Ignore Step</a>
+
+
+
+      
+   </form>
+</body>
+</html>

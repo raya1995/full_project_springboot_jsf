@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+xmlns:f="http://java.sun.com/jsf/core" 
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:ui="http://java.sun.com/jsf/facelets"
+ template="/template/templateDash.xhtml"
+xmlns:p="http://primefaces.org/ui">
+<ui:param name="page_name" value="Connexion" />
+<ui:define name="menu">
+
+
+<h:panelGrid columns="2">
+
+
+
+        
+ 
+
+		<link rel="stylesheet" type="text/css" href="like.css" media="screen" />
+
+<h:form>
+<div id="content">
+
+            <div class="inner" style="min-height:1200px;">
+                <div class="row">
+                    <div class="col-lg-12">
+
+
+                        <h2>Received Appointments</h2>
+
+
+
+                    </div>
+                </div>
+
+                
+
+
+
+
+            
+
+
+  
+
+<table>
+
+
+<tr><td><h:outputText value="Hour"  /></td>
+<td><h:inputText id="heure"
+ value="#{appointmentController.heure}"
+ required="true"
+ requiredMessage="you must choose an hour for your appointment"
+ validatorMessage="the hour chosen must be between 8am and 5pm//">
+  <f:validateDoubleRange minimum="8" maximum="17" for="heure"></f:validateDoubleRange>
+      <f:converter converterId="javax.faces.Integer" />
+  
+ </h:inputText></td></tr>
+<tr><td><h:outputText value="State" /></td>
+<td><h:inputText id="state" 
+value="#{appointmentController.state}"></h:inputText></td></tr>
+<tr><td><h:outputText value="Attendance" /></td>
+<td><h:inputText id="attendance" 
+value="#{appointmentController.attendance}"></h:inputText></td></tr>
+<tr><td><h:outputText value="Seen"></h:outputText></td>
+
+
+<td><h:selectBooleanCheckbox
+value="#{appointmentController.visibility}"></h:selectBooleanCheckbox></td></tr>
+<tr><td><h:outputText value="purchased?" ></h:outputText></td>
+<td><h:selectBooleanCheckbox
+value="#{appointmentController.purchased}" action="#{appointmentController.purchased()}"></h:selectBooleanCheckbox></td></tr>
+
+<tr><td><p:commandButton value="Update Appointment"
+action="#{appointmentController.updateAppointment()}">
+    </p:commandButton></td>
+    <td><p:commandButton value="Clean"
+action="#{appointmentController.cleanApp()}">
+    </p:commandButton></td></tr>
+    
+   
+   </table>
+
+
+    
+       
+
+<h4>All appointments received</h4>
+
+<h:dataTable id="myTable" value="#{appointmentController.appointmentts}" var="appointment" border="1"
+ filteredValue="#{appointment.filteredAppointmentList}"
+             widgetVar="appointmentWidget" emptyMessage="No cars found with given criteria">
+              <f:facet name="header">
+        <p:outputPanel>
+            <h:outputText value="Search all:"/>
+            <p:inputText id="globalFilter"
+                         onkeyup="PF('appointmentWidget').filter()"
+                         style="width:150px" placeholder="Search text"/>
+        </p:outputPanel>
+    </f:facet>
+<h:column filterBy="#{appointment.dateAppointment}" filterMatchMode="contains"><f:facet name="header"><h:outputText value="dateAppointment" /></f:facet>
+<h:outputText value="#{appointment.dateAppointement}" /></h:column>
+<h:column filterBy="#{appointment.heure}" filterMatchMode="contains"><f:facet name="header"><h:outputText value="Hour" /></f:facet>
+<h:outputText value="#{appointment.heure}" /></h:column>
+<h:column filterBy="#{appointment.visibility== true ? 'Oui' : 'Non'}" filterMatchMode="contains"><f:facet name="header"><h:outputText value="visibility" /></f:facet>
+<h:outputText value="#{appointment.visibility== true ? 'Oui' : 'Non'}" /></h:column>
+<h:column filterBy="#{appointment.state}" filterMatchMode="contains"><f:facet name="header"><h:outputText value="state" /></f:facet>
+<h:outputText value="#{appointment.state}" /></h:column>
+<h:column filterBy="#{appointment.purchased== true ? 'Oui' : 'Non'}" filterMatchMode="contains"><f:facet name="header"><h:outputText value="purchased" /></f:facet>
+<h:outputText value="#{appointment.purchased== true ? 'Oui' : 'Non'}" /></h:column>
+<h:column filterBy="#{appointment.attendance}" filterMatchMode="contains"><f:facet name="header"><h:outputText value="attendance" /></f:facet>
+<h:outputText value="#{appointment.attendance}" /></h:column>
+<h:column filterBy="#{appointment.justification}" filterMatchMode="contains"><f:facet name="header"><h:outputText value="justification" /></f:facet>
+<h:outputText value="#{appointment.justification}" /></h:column>
+<h:column filterBy="#{appointment.datePurchasing}" filterMatchMode="contains"><f:facet name="header"><h:outputText value="datePurchasing" /></f:facet>
+<h:outputText value="#{appointment.datePurchasing}" /></h:column>
+<h:column filterBy="#{appointment.filepage}" filterMatchMode="contains"><f:facet name="header"><h:outputText value="Files" /></f:facet>
+<h:outputText value="#{appointment.files}" /><h:commandButton action="#{appointmentController.filePage}" value="Show" /></h:column>
+<h:column filterBy="#{appointment.client}" filterMatchMode="contains"><f:facet name="header"><h:outputText value="ClientId" /></f:facet>
+<h:outputText value="#{appointment.client}" /></h:column>
+<h:column filterBy="#{appointment.ad}" filterMatchMode="contains"><f:facet name="header"><h:outputText value="Ad" /></f:facet>
+<h:outputText value="#{appointment.ad}" /></h:column>
+<h:column>
+<f:facet name="header"><h:outputText value="Action" /></f:facet>
+<h:commandButton action="#{appointmentController.removeAppointment(appointment.idAppointement)}"
+value="Delete" />
+<h:commandButton action="#{appointmentController.displayAppointment(appointment)}"
+value="Afficher" />
+</h:column>
+
+</h:dataTable>
+
+
+<h3>Appointments of the day</h3>
+<h:dataTable value="#{appointmentController.appointmentToDay}" var="appointements" border="1">
+<h:column><f:facet name="header"><h:outputText value="dateAppointment" /></f:facet>
+<h:outputText value="#{appointements.dateAppointement}" /></h:column>
+<h:column><f:facet name="header"><h:outputText value="Hour" /></f:facet>
+<h:outputText value="#{appointements.heure}" /></h:column>
+<h:column><f:facet name="header"><h:outputText value="visibility" /></f:facet>
+<h:outputText value="#{appointements.visibility== true ? 'Oui' : 'Non'}" /></h:column>
+<h:column><f:facet name="header"><h:outputText value="state" /></f:facet>
+<h:outputText value="#{appointements.state}" /></h:column>
+<h:column><f:facet name="header"><h:outputText value="purchased" /></f:facet>
+<h:outputText value="#{appointements.purchased== true ? 'Oui' : 'Non'}" /></h:column>
+<h:column><f:facet name="header"><h:outputText value="attendance" /></f:facet>
+<h:outputText value="#{appointements.attendance}" /></h:column>
+<h:column><f:facet name="header"><h:outputText value="justification" /></f:facet>
+<h:outputText value="#{appointements.justification}" /></h:column>
+<h:column><f:facet name="header"><h:outputText value="datePurchasing" /></f:facet>
+<h:outputText value="#{appointements.datePurchasing}" /></h:column>
+<h:column><f:facet name="header"><h:outputText value="Files" /></f:facet>  
+<h:outputText value="#{appointment.files}" />
+</h:column>
+<h:column><f:facet name="header"><h:outputText value="ClientId" /></f:facet>
+<h:outputText value="#{appointment.client}" /></h:column>
+<h:column><f:facet name="header"><h:outputText value="Ad" /></f:facet>
+<h:outputText value="#{appointment.ad}" /></h:column>
+
+</h:dataTable>
+
+
+
+</div>
+
+
+</div>
+
+
+</h:form></h:panelGrid></ui:define></ui:composition>

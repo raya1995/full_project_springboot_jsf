@@ -1,0 +1,24 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/template/template.xhtml">
+	<ui:param name="page_name" value="Accueil" />
+	<ui:define name="content">
+		<!--BEGIN : TP1 JSF Introduction Login -->
+		<h:panelGroup>
+		<b>Interface agent</b>
+			<h:form>
+				<h:outputText value="Bonjour #{UserRestController.email} " />
+				<h:commandLink value="|Déconnexion" />
+			</h:form>
+			<br />
+			<br />
+			<br />
+		</h:panelGroup>
+
+
+		<h:link outcome="/pages/admin/welcome" value="Page d'acceuil" />
+		<br />
+	</ui:define>
+</ui:composition>
